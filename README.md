@@ -40,3 +40,7 @@ Pambagian tugas:
 	- Alfred: Struktur web
 	- Adhitya: AJAX?
 	- Juan: Content?
+
+References:
+
+	- https://arknightstheanime.blogspot.com/
