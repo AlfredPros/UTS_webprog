@@ -5,5 +5,5 @@
 <h1>Tidak ada ide!</h1>
 
 <img src="https://yt3.ggpht.com/ytc/AKedOLTq7Wg8iRjcwhTAuiAnFY4aVHC12t-evvLXj7Ny=s176-c-k-c0x00ffffff-no-rj">
-=======
+
 
