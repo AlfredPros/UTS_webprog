@@ -1,6 +1,6 @@
 <?php
 
-define('base_url', 'http://localhost/mvc_framework/public/');
+define('base_url', 'http://localhost/UTS_webprog/public/');
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');

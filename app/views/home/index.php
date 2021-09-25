@@ -5,9 +5,11 @@
                 ?>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="row">
-                            <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
-                        </div>
+                        <a href="<?= base_url ?>detail">
+                            <div class="row">
+                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
+                            </div>
+                        </a>
                         <div class="row">
                             <div class="col">
                                 <p style="font-size: large;">Judul</p>
@@ -27,9 +29,11 @@
                     </div>
                         
                     <div class="col-md-4">
-                        <div class="row">
-                            <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
-                        </div>
+                        <a href="<?= base_url ?>detail">
+                            <div class="row">
+                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
+                            </div>
+                        </a>
                         <div class="row">
                             <div class="col">
                                 <p style="font-size: large;">Judul</p>
@@ -49,9 +53,11 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div class="row">
-                            <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
-                        </div>
+                        <a href="<?= base_url ?>detail">
+                            <div class="row">
+                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
+                            </div>
+                        </a>
                         <div class="row">
                             <div class="col">
                                 <p style="font-size: large;">Judul</p>
