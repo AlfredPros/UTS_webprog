@@ -31,15 +31,27 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F1F4F5">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">[IF330] Web Programming</a>
+            <a class="navbar-brand" href="#">Berita Anime</a>
             <!-- Button for smaller-size -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Employee</a>
+                        <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected>Choose...</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>   
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary">Login</button>
                     </li>
                 </ul>
             </div>
