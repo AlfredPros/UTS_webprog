@@ -18,6 +18,12 @@
 	<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
 
 	<style>
+        @font-face {
+            font-family: 'allerta';
+            font-style: normal;
+            font-weight: normal;
+            src: url(https://fonts.googleapis.com/css2?family=Allerta&family=Roboto&display=swap);
+        }
 		td.details-control {
 			background: url( <?='../app/view/home/details_open.png' ?> ) no-repeat center center;
 			cursor: pointer;

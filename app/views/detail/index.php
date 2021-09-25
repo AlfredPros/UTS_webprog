@@ -6,10 +6,10 @@
   <h1>Tokyo 7th Sisters<h1>
   <p style="font-size:21px">@Tanggal: 29-13-2090</p>
   <br>
-  <p style="font-size:24px; font-family: 'aller', serif">
+  <p style="font-size:24px; font-family: aller, allerta">
     777 FESTIVAL 4thにてイラスト本を出します！よろしくお願い致します。
   </p>
-  <p style="font-size:24px; font-family: 'aller', serif">
+  <p style="font-size:24px; font-family: aller, allerta">
     ※すべてのイラストの無断転載・無断使用禁止を禁止します。<br>
     無断で使用、商用目的で使われた場合はご連絡させて頂くことがありますのでご注意ください。<br>
     <br>
@@ -34,7 +34,7 @@
       <form class="form-group">
         <div class="row">
           <div class="col col-md-6">
-            <textarea name="comment" class="form-control" style="margin-bottom:12px"></textarea>
+            <textarea name="comment" class="form-control" style="margin-bottom:12px" placeholder="Your comment here!"></textarea>
           </div>
         </div>
         <div class="row">
