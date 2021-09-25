@@ -1,4 +1,5 @@
 <div class="container">
+    <br>
         <?php 
             for ($i = 0; $i < 3; $i++)
             {
@@ -7,13 +8,19 @@
                     <div class="col-md-4">
                         <a href="<?= base_url ?>detail">
                             <div class="row">
-                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
+                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" style="padding-bottom:8px">
                             </div>
                         </a>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: large;">Judul</p>
+                                <p style="font-size: large; ">Judul</p>
                             </div>
+                            <!--
+                            <div class="col">
+                                <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
+                                <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
+                            </div>
+                            -->
                         </div>
                         <div class="row">
                             <div class="col">
@@ -24,20 +31,26 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p style="font-size: small;">Kategori</p>
+                            <p style="font-size: small; padding-bottom:8px">Kategori</p>
                         </div>
                     </div>
                         
                     <div class="col-md-4">
                         <a href="<?= base_url ?>detail">
                             <div class="row">
-                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
+                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" style="padding-bottom:8px">
                             </div>
                         </a>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: large;">Judul</p>
+                                <p style="font-size: large; ">Judul</p>
                             </div>
+                            <!--
+                            <div class="col">
+                                <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
+                                <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
+                            </div>
+                            -->
                         </div>
                         <div class="row">
                             <div class="col">
@@ -48,19 +61,25 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p style="font-size: small;">Kategori</p>
+                            <p style="font-size: small; padding-bottom:8px">Kategori</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <a href="<?= base_url ?>detail">
                             <div class="row">
-                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" >
+                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" style="padding-bottom:8px">
                             </div>
                         </a>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: large;">Judul</p>
+                                <p style="font-size: large; ">Judul</p>
+                            </div>
+                            <div class="col">
+                                <!--
+                                <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
+                                <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
+                                -->
                             </div>
                         </div>
                         <div class="row">
@@ -72,7 +91,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p style="font-size: small;">Kategori</p>
+                            <p style="font-size: small; padding-bottom:8px">Kategori</p>
                         </div>
                     </div>
                 </div>
