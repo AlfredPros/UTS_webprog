@@ -39,14 +39,14 @@
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-right:16px">
                         <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Category</label>
                             <select class="form-select" id="inputGroupSelect01">
                                 <option selected>Choose...</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="1">Game</option>
+                                <option value="2">Animation</option>
+                                <option value="3">Vtuber</option>
                             </select>   
                         </div>
                     </li>
