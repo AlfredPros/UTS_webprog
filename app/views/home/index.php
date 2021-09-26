@@ -15,12 +15,12 @@
                             <div class="col">
                                 <p style="font-size: large; ">Judul</p>
                             </div>
-                            <!--
+                            <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                             <div class="col">
                                 <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
                             </div>
-                            -->
+                            <?php } ?>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -45,12 +45,12 @@
                             <div class="col">
                                 <p style="font-size: large; ">Judul</p>
                             </div>
-                            <!--
+                            <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                             <div class="col">
                                 <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
                             </div>
-                            -->
+                            <?php } ?>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -75,12 +75,12 @@
                             <div class="col">
                                 <p style="font-size: large; ">Judul</p>
                             </div>
+                            <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                             <div class="col">
-                                <!--
                                 <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
-                                -->
                             </div>
+                            <?php } ?>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-                 <?php
-        };
+            <?php
+            };
         ?>
 </div>
