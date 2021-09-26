@@ -45,9 +45,19 @@
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                     <li class="nav-item" style="margin-right:16px">
                         <div class="input-group mb-3">
-                        <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                            <a href="<?= base_url ?>">
+                                <button class="btn btn-primary">+Create News</button>
+                            </a>
+                        </div>
+                    </li>
+                    <?php } ?>
+
+                    <li class="nav-item" style="margin-right:16px">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Category</label>
                             <select class="form-select" id="inputGroupSelect01">
                                 <option selected>Choose...</option>
                                 <option value="1">Game</option>
@@ -56,10 +66,17 @@
                             </select>   
                         </div>
                     </li>
+
                     <li class="nav-item">
+                        <?php if (isset($_POST['email'])) { ?>
+                        <a href="<?= base_url ?>">
+                            <button class="btn btn-danger">Logout</button>
+                        </a>
+                        <?php } else { ?>
                         <a href="<?= base_url ?>/login">
                             <button class="btn btn-primary">Login</button>
                         </a>
+                        <?php } ?>
                     </li>
                 </ul>
             </div>
