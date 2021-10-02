@@ -9,6 +9,16 @@
         }
     ?>
     <br>
+
+    <?php
+        var_dump($data['allnews']);
+        echo '<img src="data:image/jpg;base64,'.base64_encode( $data['allnews'][1][3] ).'"/>';
+    ?>
+
+    <br>
+    <br>
+    <br>
+
         <?php 
             for ($i = 0; $i < 3; $i++)
             {

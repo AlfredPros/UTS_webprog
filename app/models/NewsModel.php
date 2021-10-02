@@ -20,14 +20,13 @@ class NewsModel extends Database
     public function insertNews($data)
     {
       $query = $this->db->prepare("INSERT into news(newsTitle, newsCategory, newsThumbnail, 
-                                    newsWriter, newsPublicationDate, newsContent)
+                                    newsWriter, newsContent)
       values (:newsTitle, :newsCategory, :newsThumbnail, 
-                                    :newsWriter, :newsPublicationDate, :newsContent)");
+                                    :newsWriter, :newsContent)");
       $query->bindParam(":newsTitle", $data['newsTitle']);
       $query->bindParam(":newsCategory", $data['newsCategory']);
       $query->bindParam(":newsThumbnail", $data['newsThumbnail']);
-      $query->bindParam(":newsWriter", $data['newsTitle']);
-      $query->bindParam(":newsPublicationDate", $data['newsPublicationDate']);
+      $query->bindParam(":newsWriter", $data['newsWriter']);
       $query->bindParam(":newsContent", $data['newsContent']);
       $query->execute();
       return $query->rowCount();

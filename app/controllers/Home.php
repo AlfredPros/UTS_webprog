@@ -13,6 +13,7 @@ class Home extends Controller
 	public function index()
 	{
 		$data['title'] = 'Halaman Home';
+		$data['allnews'] = $this->model('NewsModel')->getAllNews();
 
 		$this->view('templates/header', $data);
 		$this->view('home/index', $data);
