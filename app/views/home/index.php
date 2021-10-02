@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="padding-top: 25px; padding-bottom: 25px">
     <br>
         <?php 
             for ($i = 0; $i < 3; $i++)

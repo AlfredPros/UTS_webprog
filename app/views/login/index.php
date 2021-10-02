@@ -1,6 +1,6 @@
 
 <!-- Form -->
-<div class="container" style="padding-top: 6.5%; padding-bottom: 6%;">
+<div class="container" style="padding-top: 75px; padding-bottom: 75px">
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>" class="col-md-6">
             <div class="form-group" style="padding-bottom:15px">
