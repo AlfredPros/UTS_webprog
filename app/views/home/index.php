@@ -1,5 +1,3 @@
-<h1>WELCOME TO LOYSING's BRANCH</h1>
-
 <div class="container">
     <h1>Loysing</h1>
     <br>
