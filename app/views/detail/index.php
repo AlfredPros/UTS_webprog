@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container" style="padding-top: 25px">
   <div class="row">
     <img src="http://localhost/UTS_webprog/app/views/detail/59855940.jpg">
   </div>
   <br>
   <h1><strong>Tokyo 7th Sisters</strong><h1>
-  <p style="font-size:21px">November 8, 2016 12:45 PM</p>
+  <p style="font-size:medium;">November 8, 2016 12:45 PM</p>
   <br>
-  <p style="font-size:24px">
+  <p style="font-size:medium">
     777 FESTIVAL 4thにてイラスト本を出します！よろしくお願い致します。
   </p>
-  <p style="font-size:24px">
+  <p style="font-size:medium">
     ※すべてのイラストの無断転載・無断使用禁止を禁止します。<br>
     無断で使用、商用目的で使われた場合はご連絡させて頂くことがありますのでご注意ください。<br>
     <br>
@@ -20,7 +20,8 @@
     【お仕事】pixiv10周年/カードイラスト(企業)/MV制作/同人イラストなど│お仕事募集はHPにて/個人様はスキマかスケブでご依頼下さい。
   </p>
   <br>
-  <p style="font-size:18px">Penerbit: 穂海ほのほの☕ご依頼募集中</p>
+  <p style="font-size:small;">Penerbit: 穂海ほのほの☕ご依頼募集中</p>
+  <p style="font-size:small;">Kategori: Jepang</p>
   <br>
   <h3 style="padding-bottom:8px">Comment</h3>
   <div class="row">
@@ -29,7 +30,7 @@
     </div>
     <div class="col col-md-11">
       <div class="row">
-        <p style="font-weight: bold; font-size:21px; margin-bottom:4px;">honohono0416</p>
+        <p style="font-weight: bold; font-size:medium; margin-bottom:4px;">honohono0416</p>
       </div>
       <form class="form-group">
         <div class="row">
@@ -52,10 +53,10 @@
     </div>
     <div class="col col-md-11">
       <div class="row">
-        <p style="font-weight: bold; font-size:21px; margin-bottom:4px;">honohono416</p>
+        <p style="font-weight: bold; font-size:medium; margin-bottom:4px;">honohono416</p>
       </div>
       <div class="row">
-        <p style="font-size:18px; margin-bottom:8px;">I made this.</p>
+        <p style="font-size:medium; margin-bottom:8px;">I made this.</p>
       </div>
       <div class="row">
         <div class="col">
@@ -71,10 +72,10 @@
     </div>
     <div class="col col-md-11">
       <div class="row">
-        <p style="font-weight: bold; font-size:21px; margin-bottom:4px;">穂海ほのほの</p>
+        <p style="font-weight: bold; font-size:medium; margin-bottom:4px;">穂海ほのほの</p>
       </div>
       <div class="row">
-        <p style="font-size:18px; margin-bottom:8px;">I also made this.</p>
+        <p style="font-size:medium; margin-bottom:8px;">I also made this.</p>
       </div>
       <div class="row">
         <div class="col">
