@@ -2,15 +2,15 @@
 
 class Dosignup extends Controller {
     public function index() {
-        $firstname = strip_tags($_POST['firstname']);
-        $lastname = strip_tags($_POST['lastname']);
-        $email = strip_tags($_POST['email']);
-        $password = strip_tags($_POST['password']);
-        $birthdate = strip_tags($_POST['birthdate']);
-        $gender = strip_tags($_POST['gender']);
-        $photo = strip_tags($_POST['photo']);
+        $data['firstname'] = strip_tags($_POST['firstname']);
+        $data['lastname'] = strip_tags($_POST['lastname']);
+        $data['email'] = strip_tags($_POST['email']);
+        $data['password'] = strip_tags($_POST['password']);
+        $data['birthdate'] = strip_tags($_POST['birthdate']);
+        $data['gender'] = strip_tags($_POST['gender']);
+        $data['photo'] = strip_tags($_POST['photo']);
 
-        if (isset($firstname) && isset($lastname) && isset($email) && isset($password) && isset($birthdate) && isset($gender) && isset($photo)) {
+        if ($data['firstname'] != NULL && $data['lastname'] != NULL && $data['email'] != NULL && $data['password'] != NULL && $data['birthdate'] != NULL && $data['gender'] != NULL && $data['photo'] != NULL) {
             $hash = hash('sha512', $password);
 
             $data['title'] = "Do Signup";
@@ -18,16 +18,24 @@ class Dosignup extends Controller {
             //$this->model('UserModel')->insertUser($firstname, $lastname, $email, $hash, $birthdate, $gender, $photo);
 
             $_SESSION['alertnotif'] = "Account signed up!";
-
+            
+            /*
             $this->view('templates/header', $data);
-            //echo $email . " " . $password . " " . $hash;
+            echo $email . " " . $password . " " . $hash;
+            echo '<br>' . $firstname . $lastname;
             $this->view('templates/footer');
+            */
 
             header('Location: '.base_url.'index');
             die();
         }
         else {
             echo "Hacker alert!";
+
+            $_SESSION['alertnotif'] = "Missing input!";
+
+            header('Location: '.base_url.'signup/index');
+            die();
         }
 
 

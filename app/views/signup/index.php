@@ -39,6 +39,14 @@
                 </div>
             </div>
 
+            <?php
+            if (isset($_SESSION['alertnotif'])) { ?>
+            <p style="color:red;"><?= $_SESSION['alertnotif'] ?></p>
+            <?php
+                unset($_SESSION['alertnotif']);
+            }
+            ?>
+
             <button type="submit" class="btn btn-primary" style="margin-right:5px">Submit</button>
             <a href="<?= base_url ?>" class="btn btn-secondary" role="button" style="margin-right:5px">Cancel</a>
         </form>
