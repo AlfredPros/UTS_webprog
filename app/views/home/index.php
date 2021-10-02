@@ -8,13 +8,13 @@
                     <div class="col-md-4">
                         <a href="<?= base_url ?>detail">
                             <div class="row">
-                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" style="padding-bottom:8px">
+                            <img src="http://localhost/UTS_webprog/design/thumbnail.png" alt="" style="padding-bottom:8px; border-radius: 50px;">
                             </div>
                         </a>
                         <div class="row">
                             <div class="col">
-                                <a href="<?= base_url ?>detail">
-                                    <p style="font-size: large; ">Judul</p>
+                                <a href="<?= base_url ?>detail" style="text-decoration: none; color: #C90000;">
+                                    <p style="font-size: large; "><b>Judul</b></p>
                                 </a>
                             </div>
                             <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
@@ -24,7 +24,7 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="row">
+                        <div class="row" style="text-decoration: none; color: #C90000;">
                             <div class="col">
                                 <p style="font-size: medium;">Penulis</p>
                             </div>
@@ -33,20 +33,20 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p style="font-size: small; padding-bottom:8px">Kategori</p>
+                            <p style="font-size: small; padding-bottom:8px; text-decoration: none; color: #C90000;">Kategori</p>
                         </div>
                     </div>
                         
                     <div class="col-md-4">
                         <a href="<?= base_url ?>detail">
                             <div class="row">
-                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" style="padding-bottom:8px">
+                                <img src="http://localhost/UTS_webprog/design/thumbnail.png" alt="" style="padding-bottom:8px; border-radius: 50px;">
                             </div>
                         </a>
                         <div class="row">
                             <div class="col">
-                                <a href="<?= base_url ?>detail">
-                                    <p style="font-size: large; ">Judul</p>
+                                <a href="<?= base_url ?>detail" style="text-decoration: none; color: #C90000;">
+                                    <p style="font-size: large; "><b>Judul</b></p>
                                 </a>
                             </div>
                             <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
@@ -56,7 +56,7 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="row">
+                        <div class="row" style="text-decoration: none; color: #C90000;">
                             <div class="col">
                                 <p style="font-size: medium;">Penulis</p>
                             </div>
@@ -65,20 +65,20 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p style="font-size: small; padding-bottom:8px">Kategori</p>
+                            <p style="font-size: small; padding-bottom:8px; text-decoration: none; color: #C90000;">Kategori</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <a href="<?= base_url ?>detail">
                             <div class="row">
-                                <img src="http://localhost/UTS_webprog/design/home_notlogin.png" alt="" style="padding-bottom:8px">
+                                <img src="http://localhost/UTS_webprog/design/thumbnail.png" alt="" style="padding-bottom:8px; border-radius: 50px;">
                             </div>
                         </a>
                         <div class="row">
                             <div class="col">
-                                <a href="<?= base_url ?>detail">
-                                    <p style="font-size: large; ">Judul</p>
+                                <a href="<?= base_url ?>detail" style="text-decoration: none; color: #C90000;">
+                                    <p style="font-size: large; "><b>Judul</b></p>
                                 </a>
                             </div>
                             <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
@@ -88,7 +88,7 @@
                             </div>
                             <?php } ?>
                         </div>
-                        <div class="row">
+                        <div class="row" style="text-decoration: none; color: #C90000;">
                             <div class="col">
                                 <p style="font-size: medium;">Penulis</p>
                             </div>
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <p style="font-size: small; padding-bottom:8px">Kategori</p>
+                            <p style="font-size: small; padding-bottom:8px; text-decoration: none; color: #C90000;">Kategori</p>
                         </div>
                     </div>
                 </div>
