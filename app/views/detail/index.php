@@ -3,8 +3,8 @@
     <img src="http://localhost/UTS_webprog/app/views/detail/59855940.jpg">
   </div>
   <br>
-  <h1><strong>Tokyo 7th Sisters</strong><h1>
-  <p style="font-size:21px">November 8, 2016 12:45 PM</p>
+  <h1><strong>Tokyo 7th Brothers</strong><h1>
+  <p style="font-size:21px">November 8, 2021 12:45 PM</p>
   <br>
   <p style="font-size:24px; font-family: Allerta">
     777 FESTIVAL 4thにてイラスト本を出します！よろしくお願い致します。
