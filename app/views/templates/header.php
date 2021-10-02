@@ -22,7 +22,7 @@
             font-family: 'Allerta';
             font-style: normal;
             font-weight: normal;
-            src: url(https://fonts.googleapis.com/css2?family=Allerta&family=Roboto&display=swap);
+            src: url('https://fonts.googleapis.com/css2?family=Allerta&family=Roboto&display=swap');
         }
 		td.details-control {
 			background: url( <?='../app/view/home/details_open.png' ?> ) no-repeat center center;
