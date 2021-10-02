@@ -2,7 +2,7 @@
 <!-- Form -->
 <div class="container" style="padding-top:25px">
     <div class="row justify-content-center">
-        <form method="POST" action="<?= base_url ?>" class="col-md-6">
+        <form method="POST" action="<?= base_url ?>/dologin" class="col-md-6">
             <div class="form-group" style="padding-bottom:15px">
                 <label for="email">Username/Email</label>
                 <input type="text" class="form-control" id="email" name="email" placeholder="Example-chan / example@email.com" value="" required>

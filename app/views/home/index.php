@@ -1,4 +1,10 @@
 <div class="container">
+    <?php
+        if (isset($_SESSION['alertnotif'])) {
+            echo $_SESSION['alertnotif'];
+            unset($_SESSION['alertnotif']);
+        }
+    ?>
     <br>
         <?php 
             for ($i = 0; $i < 3; $i++)
