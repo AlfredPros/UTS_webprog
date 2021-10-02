@@ -35,9 +35,11 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F1F4F5">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#C90000">
         <div class="container-fluid">
-            <a class="navbar-brand" href=<?= base_url ?> style="">Berita Anime</a>
+            <a class="navbar-brand" href=<?= base_url ?> style="">
+                <img src="http://localhost/UTS_webprog/design/AnimeNetworkLogo.png" alt="" width="200">
+            </a>
             <!-- Button for smaller-size -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,8 +59,8 @@
 
                     <li class="nav-item" style="margin-right:16px">
                         <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupSelect01">Category</label>
-                            <select class="form-select" id="inputGroupSelect01">
+                            <label class="input-group-text" for="inputGroupSelect01" style="background-color: white; color: #C90000;"><b>Category</b></label>
+                            <select class="form-select" id="inputGroupSelect01" style="border-color: white; background-color: #C90000; color: white">
                                 <option selected>Choose...</option>
                                 <option value="1">Game</option>
                                 <option value="2">Animation</option>
