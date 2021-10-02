@@ -45,3 +45,7 @@ References:
 
 	- https://arknightstheanime.blogspot.com/
 	
+Note:
+
+	- Password hash: SHA512 (https://emn178.github.io/online-tools/sha512.html) [128 chars]
+	
