@@ -27,6 +27,19 @@ class UserModel extends Database
       }
     }
 
+    public function usernameAvailable($username)
+    {
+        $query = $this->db->prepare("SELECT * FROM allUser WHERE username=:username");
+        $query->bindParam(":username", $username);
+        $query->execute();
+
+        if ($query->rowCount() > 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public function login($username, $password)
     {
         $query = $this->db->prepare("SELECT UID, username,password WHERE username=:username");
@@ -45,19 +58,6 @@ class UserModel extends Database
         } else {
             // Jika tidak ditemukan username
             return false;
-        }
-    }
-
-    public function usernameAvailable($username)
-    {
-        $query = $this->db->prepare("SELECT * FROM allUser WHERE username=:username");
-        $query->bindParam(":username", $username);
-        $query->execute();
-
-        if ($query->rowCount() > 0) {
-            return false;
-        } else {
-            return true;
         }
     }
 
