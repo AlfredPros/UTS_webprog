@@ -48,7 +48,7 @@
                     <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                     <li class="nav-item" style="margin-right:16px">
                         <div class="input-group mb-3">
-                            <a href="<?= base_url ?>">
+                            <a href="<?= base_url ?>/addnews">
                                 <button class="btn btn-primary">+Create News</button>
                             </a>
                         </div>

@@ -4,8 +4,8 @@
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>" class="col-md-6">
             <div class="form-group" style="padding-bottom:15px">
-                <label for="email">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="example@email.com" value="" required>
+                <label for="email">Username/Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Example-chan / example@email.com" value="" required>
             </div>
             <div class="form-group" style="padding-bottom:15px">
                 <label for="password">Password</label>
