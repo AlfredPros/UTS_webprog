@@ -13,11 +13,13 @@
                         </a>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: large; ">Judul</p>
+                                <a href="<?= base_url ?>detail">
+                                    <p style="font-size: large; ">Judul</p>
+                                </a>
                             </div>
                             <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                             <div class="col">
-                                <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
+                                <a href="<?= base_url ?>/editnews" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
                             </div>
                             <?php } ?>
@@ -43,11 +45,13 @@
                         </a>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: large; ">Judul</p>
+                                <a href="<?= base_url ?>detail">
+                                    <p style="font-size: large; ">Judul</p>
+                                </a>
                             </div>
                             <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                             <div class="col">
-                                <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
+                                <a href="<?= base_url ?>/editnews" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
                             </div>
                             <?php } ?>
@@ -73,11 +77,13 @@
                         </a>
                         <div class="row">
                             <div class="col">
-                                <p style="font-size: large; ">Judul</p>
+                                <a href="<?= base_url ?>detail">
+                                    <p style="font-size: large; ">Judul</p>
+                                </a>
                             </div>
                             <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
                             <div class="col">
-                                <a href="<?= base_url ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
+                                <a href="<?= base_url ?>/editnews" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
                             </div>
                             <?php } ?>
