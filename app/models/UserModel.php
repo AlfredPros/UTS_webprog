@@ -39,4 +39,18 @@ class UserModel extends Database
             return true;
         }
     }
+
+    public function isAdmin($data)
+    {
+        $query = $this->db->prepare("SELECT * FROM allUser WHERE UID=:UID");
+        $query->bindParam(":UID", $data['UID']);
+        $query->execute();
+        $result = $query->fetch();
+
+        if ($result['isAdmin'] == 'Y') {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
