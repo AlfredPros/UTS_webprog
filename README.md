@@ -38,9 +38,10 @@ Pambagian tugas:
 
 	- Loysing: Database & Bootstrap (CSS) & Web design
 	- Alfred: Struktur web
-	- Adhitya: AJAX?
+	- Adhitya: Design setiap web & AJAX?
 	- Juan: Content?
 
 References:
 
 	- https://arknightstheanime.blogspot.com/
+	
