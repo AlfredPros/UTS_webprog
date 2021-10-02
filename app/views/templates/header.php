@@ -45,7 +45,7 @@
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
+                    <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                     <li class="nav-item" style="margin-right:16px">
                         <div class="input-group mb-3">
                             <a href="<?= base_url ?>/addnews">
@@ -68,12 +68,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <?php if (isset($_POST['email'])) { ?>
-                        <a href="<?= base_url ?>">
+                        <?php if (isset($_SESSION['loggedin'])) { ?>
+                        <a href="<?= base_url ?>dologout">
                             <button class="btn btn-danger">Logout</button>
                         </a>
                         <?php } else { ?>
-                        <a href="<?= base_url ?>/login">
+                        <a href="<?= base_url ?>login">
                             <button class="btn btn-primary">Login</button>
                         </a>
                         <?php } ?>
