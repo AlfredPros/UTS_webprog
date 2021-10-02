@@ -2,20 +2,20 @@
 
 class Dosignup extends Controller {
     public function index() {
-        $data['firstname'] = strip_tags($_POST['firstname']);
-        $data['lastname'] = strip_tags($_POST['lastname']);
-        $data['email'] = strip_tags($_POST['email']);
-        $data['password'] = strip_tags($_POST['password']);
-        $data['birthdate'] = strip_tags($_POST['birthdate']);
+        $data['firstName'] = strip_tags($_POST['firstname']);
+        $data['lastName'] = strip_tags($_POST['lastname']);
+        $data['username'] = strip_tags($_POST['email']);
+        $password = strip_tags($_POST['password']);
+        $data['birthDate'] = strip_tags($_POST['birthdate']);
         $data['gender'] = strip_tags($_POST['gender']);
-        $data['photo'] = strip_tags($_POST['photo']);
+        $data['profilePhoto'] = strip_tags($_POST['photo']);
 
-        if ($data['firstname'] != NULL && $data['lastname'] != NULL && $data['email'] != NULL && $data['password'] != NULL && $data['birthdate'] != NULL && $data['gender'] != NULL && $data['photo'] != NULL) {
-            $hash = hash('sha512', $password);
+        if ($data['firstName'] != NULL && $data['lastName'] != NULL && $data['username'] != NULL && $password != NULL && $data['birthDate'] != NULL && $data['gender'] != NULL && $data['profilePhoto'] != NULL) {
+            $data['password'] = hash('sha512', $password);
 
             $data['title'] = "Do Signup";
 
-            //$this->model('UserModel')->insertUser($firstname, $lastname, $email, $hash, $birthdate, $gender, $photo);
+            $this->model('UserModel')->insertUser($data);
 
             $_SESSION['alertnotif'] = "Account signed up!";
             

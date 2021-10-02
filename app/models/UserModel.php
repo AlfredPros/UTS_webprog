@@ -12,9 +12,9 @@ class UserModel extends Database
     {
       if ($this->usernameAvailable($data['username'])) {
         $query = $this->db->prepare("INSERT into allUser(firstName, lastName, username, password, birthDate,
-        gender, profilePhoto, isAdmin)
+        gender, profilePhoto)
         values (:firstName, :lastName, :username, :password, :birthDate,
-                :gender, :profilePhoto, :isAdmin)");
+                :gender, :profilePhoto)");
         $query->bindParam(":firstName", $data['firstName']);
         $query->bindParam(":lastName", $data['lastName']);
         $query->bindParam(":username", $data['username']);
@@ -22,7 +22,6 @@ class UserModel extends Database
         $query->bindParam(":birthDate", $data['birthDate']);
         $query->bindParam(":gender", $data['gender']);
         $query->bindParam(":profilePhoto", $data['profilePhoto']);
-        $query->bindParam(":isAdmin", $data['isAdmin']);
         $query->execute();
         return $query->rowCount();
       }
