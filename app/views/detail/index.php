@@ -1,10 +1,9 @@
 <div class="container" style="padding-top: 25px">
+  <h1 style="color: #C90000;"><strong>Tokyo 7th Sisters</strong><h1>
+  <p style="font-size:medium; color: #C90000;">November 8, 2016 12:45 PM</p>
   <div class="row">
-    <img src="http://localhost/UTS_webprog/app/views/detail/59855940.jpg">
+    <img src="http://localhost/UTS_webprog/app/views/detail/59855940.jpg" style="padding-bottom:8px; border-radius: 50px; height: 350px; object-fit: cover;">
   </div>
-  <br>
-  <h1><strong>Tokyo 7th Sisters</strong><h1>
-  <p style="font-size:medium;">November 8, 2016 12:45 PM</p>
   <br>
   <p style="font-size:medium">
     777 FESTIVAL 4thにてイラスト本を出します！よろしくお願い致します。
@@ -23,14 +22,14 @@
   <p style="font-size:small;">Penerbit: 穂海ほのほの☕ご依頼募集中</p>
   <p style="font-size:small;">Kategori: Jepang</p>
   <br>
-  <h3 style="padding-bottom:8px">Comment</h3>
+  <h3 style="padding-bottom:8px; color: #C90000;"><b>Comment</b></h3>
   <div class="row">
     <div class="col col-md-1">
       <img src="http://localhost/UTS_webprog/app/views/detail/qnfa0iQK_400x400.jpg" class="col-md-12" style="border-radius: 50%">
     </div>
     <div class="col col-md-11">
       <div class="row">
-        <p style="font-weight: bold; font-size:medium; margin-bottom:4px;">honohono0416</p>
+        <p style="font-weight: bold; font-size:large; margin-bottom:4px;">honohono0416</p>
       </div>
       <form class="form-group">
         <div class="row">
@@ -46,14 +45,14 @@
       </form>
     </div>
   </div>
-  <hr>
+  <hr style="border: 1px solid #C90000;">
   <div class="row">
     <div class="col col-md-1">
       <img src="http://localhost/UTS_webprog/app/views/detail/download.png" class="col-md-12" style="border-radius: 50%">
     </div>
     <div class="col col-md-11">
       <div class="row">
-        <p style="font-weight: bold; font-size:medium; margin-bottom:4px;">honohono416</p>
+        <p style="font-weight: bold; font-size:large; margin-bottom:4px;">honohono416</p>
       </div>
       <div class="row">
         <p style="font-size:medium; margin-bottom:8px;">I made this.</p>
@@ -65,14 +64,14 @@
       </div>
     </div>
   </div>
-  <hr>
+  <hr style="border: 1px solid #C90000;">
   <div class="row">
     <div class="col col-md-1">
       <img src="http://localhost/UTS_webprog/app/views/detail/htwh_c8I_400x400.jpg" class="col-md-12" style="border-radius: 50%;">
     </div>
     <div class="col col-md-11">
       <div class="row">
-        <p style="font-weight: bold; font-size:medium; margin-bottom:4px;">穂海ほのほの</p>
+        <p style="font-weight: bold; font-size:large; margin-bottom:4px;">穂海ほのほの</p>
       </div>
       <div class="row">
         <p style="font-size:medium; margin-bottom:8px;">I also made this.</p>
