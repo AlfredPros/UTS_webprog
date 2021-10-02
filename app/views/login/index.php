@@ -12,8 +12,9 @@
                 <input type="password" class="form-control" id="password" name="password" placeholder="password" value="" required>
             </div>
             <div class="form-group" style="padding-bottom:15px">
-                <label for="recaptcha">Recaptcha</label>
-                <input type="text" class="form-control" id="recaptcha" name="recaptcha" placeholder="Text you see" value="">
+                <label for="captcha">Captcha</label>
+                <input class="form-control" value="<?= $data['captcha'] ?>" name="captcha" readonly disabled>
+                <input type="text" class="form-control" id="captcha" name="captchaInput" placeholder="Text you see" value="">
             </div>
 
             <button type="submit" class="btn btn-primary" style="margin-right:5px">Submit</button>
