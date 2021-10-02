@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2021 at 05:49 PM
+-- Generation Time: Oct 02, 2021 at 07:01 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.22
 
@@ -51,7 +51,18 @@ CREATE TABLE `comment` (
   `NID` int(11) NOT NULL,
   `commentDate` date NOT NULL DEFAULT current_timestamp(),
   `commentContent` tinytext NOT NULL,
-  `totalLike` int(11) NOT NULL
+  `totalLikes` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `likedby`
+--
+
+CREATE TABLE `likedby` (
+  `CID` int(11) NOT NULL,
+  `UID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -87,6 +98,12 @@ ALTER TABLE `comment`
   ADD PRIMARY KEY (`CID`),
   ADD KEY `UID` (`UID`),
   ADD KEY `NID` (`NID`);
+
+--
+-- Indexes for table `likedby`
+--
+ALTER TABLE `likedby`
+  ADD PRIMARY KEY (`CID`,`UID`);
 
 --
 -- Indexes for table `news`

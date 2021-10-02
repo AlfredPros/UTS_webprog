@@ -4,9 +4,9 @@ class UserModel extends Database
 {
     public function getAllUser()
     {
-      $queryPhone = $this->db->prepare("SELECT * from allUser");
-      $queryPhone->execute();
-      return $queryPhone->fetchAll();
+      $queryUser = $this->db->prepare("SELECT * from allUser");
+      $queryUser->execute();
+      return $queryUser->fetchAll();
     }
     public function insertUser($data)
     {
