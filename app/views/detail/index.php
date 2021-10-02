@@ -6,10 +6,10 @@
   <h1><strong>Tokyo 7th Sisters</strong><h1>
   <p style="font-size:21px">November 8, 2016 12:45 PM</p>
   <br>
-  <p style="font-size:24px; font-family: aller, Allerta">
+  <p style="font-size:24px; font-family: Allerta">
     777 FESTIVAL 4thにてイラスト本を出します！よろしくお願い致します。
   </p>
-  <p style="font-size:24px; font-family: aller, Allerta">
+  <p style="font-size:24px; font-family: Allerta">
     ※すべてのイラストの無断転載・無断使用禁止を禁止します。<br>
     無断で使用、商用目的で使われた場合はご連絡させて頂くことがありますのでご注意ください。<br>
     <br>
