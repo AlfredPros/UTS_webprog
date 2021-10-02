@@ -1,5 +1,4 @@
 <div class="container">
-    <h1>Loysing</h1>
     <br>
         <?php 
             for ($i = 0; $i < 3; $i++)
