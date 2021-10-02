@@ -49,7 +49,7 @@
                                     <p style="font-size: large; "><b>Judul</b></p>
                                 </a>
                             </div>
-                            <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
+                            <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                             <div class="col">
                                 <a href="<?= base_url ?>/editnews" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
@@ -81,7 +81,7 @@
                                     <p style="font-size: large; "><b>Judul</b></p>
                                 </a>
                             </div>
-                            <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
+                            <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                             <div class="col">
                                 <a href="<?= base_url ?>/editnews" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
@@ -113,7 +113,7 @@
                                     <p style="font-size: large; "><b>Judul</b></p>
                                 </a>
                             </div>
-                            <?php if (isset($_POST['email']) && $_POST['email'] == 'admin') { ?>
+                            <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                             <div class="col">
                                 <a href="<?= base_url ?>/editnews" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
                                 <a href="<?= base_url ?>" role="button" class="btn btn-danger">Delete</a>
