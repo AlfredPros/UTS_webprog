@@ -27,6 +27,27 @@ class UserModel extends Database
       }
     }
 
+    public function login($username, $password)
+    {
+        $query = $this->db->prepare("SELECT UID, username,password WHERE username=:username");
+        $query->bindParam(":username", $username);
+        $query->execute();
+
+        $result = $query->fetch();
+        if ($query->rowCount() > 0) {
+            $encryptedpassword = hash("sha512", $password);
+            if ($encryptedpassword == $result['password']) {
+                return $result['UID'];
+            } else {
+                // Jika encryptedpassword tidak sama dengan input
+                return false;
+            }
+        } else {
+            // Jika tidak ditemukan username
+            return false;
+        }
+    }
+
     public function usernameAvailable($username)
     {
         $query = $this->db->prepare("SELECT * FROM allUser WHERE username=:username");
