@@ -14,8 +14,8 @@
             <div class="form-group" style="padding-bottom:15px">
                 <label for="captcha">Captcha</label>
                 <input class="form-control" value="<?= $data['captcha'] ?>" name="captcha" readonly disabled>
-                <input type="hidden" name="captcha" value="<?= $data['captcha'] ?>">
-                <input type="text" class="form-control" id="captcha" name="captchaInput" placeholder="Text you see" value="">
+                <input type="hidden" name="captcha" value="<?= $data['captcha'] ?>" required>
+                <input type="text" class="form-control" id="captcha" name="captchaInput" placeholder="Text you see" value="" required>
             </div>
 
             <?php

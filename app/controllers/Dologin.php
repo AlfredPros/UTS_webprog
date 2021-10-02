@@ -14,21 +14,32 @@ class Dologin extends Controller {
 
                 $data['title'] = "Do Login";
 
-                $alluser = $this->model('UserModel')->getAllUser();
-                $isadmin = $this->model('UserModel')->isAdmin($data);
+                $user = $this->model('UserModel')->login($data['username'], $data['password']);
+                if ($user != false) { 
+                    $isadmin = $this->model('UserModel')->isAdmin($user);
 
-                //$_SESSION['loggedin'] = $alluser['UID'];
-                $_SESSION['alertnotif'] = "Account logged in!";
-                
-                
-                $this->view('templates/header', $data);
-                echo $data['username'] . " " . $data['password'];
-                echo '<br>' . $alluser . '<br>' . $isadmin;
-                $this->view('templates/footer');
-                
+                    $_SESSION['loggedin'] = $user;
+                    $_SESSION['admin'] = $isadmin;
+                    $_SESSION['alertnotif'] = "Account logged in!";
+                    
+                    /*
+                    $this->view('templates/header', $data);
+                    echo $data['username'] . " " . $data['password'];
+                    echo '<br>' . $user . '<br>' . $isadmin;
+                    $this->view('templates/footer');
+                    */
 
-                //header('Location: '.base_url.'index');
-                //die();
+                    header('Location: '.base_url.'index');
+                    die();
+                }
+                else {
+                    echo "Wrong username/password!";
+    
+                    $_SESSION['alertnotif'] = "Wrong username or password!";
+        
+                    header('Location: '.base_url.'login/index');
+                    die();
+                }
             }
             else {
                 echo "Robot alert!";

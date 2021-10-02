@@ -42,7 +42,7 @@ class UserModel extends Database
 
     public function login($username, $password)
     {
-        $query = $this->db->prepare("SELECT UID, username,password WHERE username=:username");
+        $query = $this->db->prepare("SELECT UID, username, password FROM allUser WHERE username=:username");
         $query->bindParam(":username", $username);
         $query->execute();
 
@@ -64,7 +64,7 @@ class UserModel extends Database
     public function isAdmin($data)
     {
         $query = $this->db->prepare("SELECT * FROM allUser WHERE UID=:UID");
-        $query->bindParam(":UID", $data['UID']);
+        $query->bindParam(":UID", $data);
         $query->execute();
         $result = $query->fetch();
 
