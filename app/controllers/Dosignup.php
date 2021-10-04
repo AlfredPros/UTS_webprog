@@ -8,7 +8,10 @@ class Dosignup extends Controller {
         $password = strip_tags($_POST['password']);
         $data['birthDate'] = strip_tags($_POST['birthdate']);
         $data['gender'] = strip_tags($_POST['gender']);
-        $data['profilePhoto'] = strip_tags($_POST['photo']);
+        $image_data = file_get_contents(addslashes($_FILES['photo']['tmp_name']));
+        $image = base64_encode($image_data);
+        $data['profilePhoto'] = $image;
+        
 
         if ($data['firstName'] != NULL && $data['lastName'] != NULL && $data['username'] != NULL && $password != NULL && $data['birthDate'] != NULL && $data['gender'] != NULL && $data['profilePhoto'] != NULL) {
             $data['password'] = hash('sha512', $password);
