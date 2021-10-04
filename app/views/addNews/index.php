@@ -2,7 +2,7 @@
 <!-- Form -->
 <div class="container" style="padding-top:25px">
     <div class="row justify-content-center">
-        <form method="POST" action="<?= base_url ?>doaddnews" class="col-md-6">
+        <form method="POST" action="<?= base_url ?>doaddnews" class="col-md-6" enctype="multipart/form-data">
             <div class="form-group" style="padding-bottom:15px">
                 <label for="newsTitle">Judul Berita</label>
                 <input type="text" class="form-control" id="newsTitle" name="newsTitle" placeholder="Berita Baru" value="" required>
