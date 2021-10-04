@@ -2,7 +2,7 @@
 <!-- Form -->
 <div class="container" style="padding-top:25px">
     <div class="row justify-content-center">
-        <form method="POST" action="<?= base_url ?>/dosignup" class="col-md-6">
+        <form method="POST" action="<?= base_url ?>/dosignup" class="col-md-6" enctype="multipart/form-data">
             <div class="form-group" style="padding-bottom:15px">
                 <label for="firstname">Nama Depan</label>
                 <input type="text" class="form-control" id="firstname" name="firstname" placeholder="John" value="" required>

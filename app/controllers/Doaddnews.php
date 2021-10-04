@@ -4,7 +4,6 @@ class Doaddnews extends Controller {
     public function index() {
         $data['newsTitle'] = strip_tags($_POST['newsTitle']);
         $data['newsCategory'] = strip_tags($_POST['newsCategory']);
-        // $data['newsThumbnail'] = $_POST['newsThumbnail'];
         $image_data = file_get_contents(addslashes($_FILES['newsThumbnail']['tmp_name']));
         $image = base64_encode($image_data);
         $data['newsThumbnail'] = $image;
@@ -32,6 +31,7 @@ class Doaddnews extends Controller {
             echo "Missing input";
 
             $_SESSION['alertnotif'] = "Missing input!";
+
             header('Location: '.base_url.'addnews/index');
             die();
         }
