@@ -12,7 +12,7 @@
 
     <?php
         var_dump($data['allnews']);
-        echo '<img src="data:image/jpg;base64,'.  $data['allnews'][1][3]  .'"/>';
+        echo '<img src="data:image/jpg;base64,'.base64_encode( $data['allnews'][1][3] ).'"/>';
     ?>
 
     <br>
