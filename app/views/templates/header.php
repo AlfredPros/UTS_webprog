@@ -38,7 +38,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#C90000;">
         <div class="container-fluid">
             <a class="navbar-brand" href=<?= base_url ?> style="">
-                <img src="http://localhost/UTS_webprog/design/AnimeNetworkLogo.png" alt="" width="200">
+                <img src="http://localhost/UTS_webprog/design/anime_news_logo_white.png" alt="" width="200">
             </a>
             <!-- Button for smaller-size -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

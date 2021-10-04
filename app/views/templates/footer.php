@@ -1,11 +1,11 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <style>
             footer {
-                position: fixed;
+                position: relative;
                 width: 100%;
-                bottom: 10px;
+                bottom: 0px;
                 margin-top: 15px;
                 padding: 15px;
                 text-align: center;
@@ -17,7 +17,7 @@
     <body>
         <footer>
             <p><b>Dibuat dengan Penuh Cinta oleh Kelompok Kawai-Desu</b></p>
-            <img src="http://localhost/UTS_webprog/design/AnimeNetworkLogo.png" alt="" width="200">
+            <img src="http://localhost/UTS_webprog/design/anime_news_logo_white.png" alt="" width="200">
         </footer>
     </body>
-</html>-->
+</html>
