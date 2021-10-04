@@ -11,7 +11,8 @@
     <br>
 
     <?php
-        var_dump($data['allnews']);
+        //var_dump($data['allnews']);
+        echo '<img src="data:image/jpg;base64,'.  $data['allnews'][0][3]  .'"/>';
         echo '<img src="data:image/jpg;base64,'.  $data['allnews'][1][3]  .'"/>';
     ?>
 
