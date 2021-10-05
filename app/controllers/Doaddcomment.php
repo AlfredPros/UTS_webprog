@@ -11,15 +11,6 @@ class Doaddcomment extends Controller {
 
             $this->model('CommentModel')->insertCommemt($data);
 
-            $_SESSION['alertnotif'] = "Comment Added!";
-            
-            /*
-            $this->view('templates/header', $data);
-            echo $email . " " . $password . " " . $hash;
-            echo '<br>' . $firstname . $lastname;
-            $this->view('templates/footer');
-            */
-
             header('Location: '.base_url.'detail/'. $data['NID']);
             die();
         }

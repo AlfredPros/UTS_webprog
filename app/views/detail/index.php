@@ -16,7 +16,7 @@
 
   <h3 style="padding-bottom:8px">Comment</h3>
   <?php 
-    if (isset($_SESSION['admin'])) {
+    if (isset($_SESSION['loggedin'])) {
       ?>
       <div class="row">
         <div class="col col-md-1">
@@ -66,7 +66,7 @@
         </div>
         <div class="row">
           <div class="col">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <a class="btn btn-primary" href="<?= base_url ?>login">Submit</a>
           </div>
         </div>
       </form>
@@ -93,7 +93,12 @@
         </div>
         <div class="row">
           <div class="col">
-          <button class="btn btn-light" style="margin-bottom:4px;">Like ❤️</button>
+            <?php if (isset($_SESSION['loggedin'])) { ?>
+              <!-- Pass parameter: UID, CID  -->
+              <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ?>" role="button" class="btn btn-primary" style="margin-right:5px">Like ❤️</a>
+            <?php } else { ?>
+              <a href="<?= base_url ?>login" role="button" class="btn btn-primary" style="margin-right:5px">Like ❤️</a>
+            <?php } ?>
           </div>
         </div>
       </div>

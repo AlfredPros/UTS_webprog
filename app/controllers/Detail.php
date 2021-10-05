@@ -20,7 +20,7 @@ class Detail extends Controller
 
 		$data['nid'] = $this->model('NewsModel')->getNews($urlget[1]);
 
-		$data['user'] = $this->model('UserModel')->getUser($_SESSION['loggedin']);
+		if (isset($_SESSION['loggedin'])) $data['user'] = $this->model('UserModel')->getUser($_SESSION['loggedin']);
 
 		$data['comments'] = $this->model("CommentModel")->getAllComments($urlget[1]);
 
