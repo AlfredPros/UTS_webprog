@@ -19,6 +19,7 @@
     ?>
 
     <!-- Hightlight -->
+    <?php if (isset($data['allnews'][0])) { ?>
     <div class="row">
         <div class="col-md-4 offset-md-4">
             <a href="<?= base_url ?>detail<?= "/". $data['allnews'][0][0] ?>">
@@ -91,7 +92,7 @@
             </div>
         </div>
     <?php 
-        }
+        } }
     ?>
     </div>
 
