@@ -13,7 +13,7 @@ class NewsModel extends Database
   public function getAllNews()
   {
     $queryNews = $this->db->prepare("SELECT NID, newsTitle, newsCategory, newsThumbnail,
-                                    newsWriter, DATE_FORMAT(newsPublicationDate, '%M %D %Y'), newsContent FROM news WHERE NID=:NID");
+                                    newsWriter, DATE_FORMAT(newsPublicationDate, '%M %D, %Y'), newsContent FROM news WHERE NID=:NID");
     $queryNews->execute();
     return $queryNews->fetchAll();
   }
