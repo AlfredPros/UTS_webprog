@@ -14,6 +14,15 @@ class Detail extends Controller
 	{
 		$data['title'] = 'Detail Berita';
 
+		$some1 = rtrim($_GET['url'], '/');
+		$cool = filter_var($some1, FILTER_SANITIZE_URL);
+		$bro = explode('/', $cool);
+
+		$data['nid'] = $this->model('NewsModel')->getNews($bro[1]);
+
+	
+
+
 		$this->view('templates/header', $data);
 		$this->view('detail/index', $data);
 		$this->view('templates/footer');

@@ -1,8 +1,21 @@
 <div class="container">
   <div class="row">
-    <img src="http://localhost/UTS_webprog/app/views/detail/59855940.jpg">
+    <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>">
   </div>
   <br>
+
+  <h1><strong><?= $data['nid'][1] ?></strong><h1>
+  <p style="font-size:21px"><?= $data['nid'][5] ?></p>
+  <br>
+  <p style="font-size:24px">
+    <?= $data['nid'][6] ?>
+  </p>
+  <br>
+  <p style="font-size:18px">Penerbit: <?= $data['nid'][4] ?></p>
+  <br>
+
+
+
   <h1><strong>Tokyo 7th Sisters</strong><h1>
   <p style="font-size:21px">November 8, 2016 12:45 PM</p>
   <br>
