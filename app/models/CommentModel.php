@@ -5,7 +5,9 @@ class CommentModel extends Database
     public function getAllComments($NID)
     {
       $queryNews = $this->db->prepare("SELECT UID, commentContent, (SELECT username FROM allUser WHERE allUser.UID=comment.UID) AS username, 
-      (SELECT profilePhoto FROM allUser WHERE allUser.UID=comment.UID) AS profilePhoto, DATE_FORMAT(commentDate, '%M %D,  %Y %l:%i %p') commentDate from comment 
+      (SELECT profilePhoto FROM allUser WHERE allUser.UID=comment.UID) AS profilePhoto, DATE_FORMAT(commentDate, '%M %D,  %Y %l:%i %p') commentDate,
+       CID, totalLikes
+       from comment 
        WHERE NID=:NID
        ORDER BY commentDate");
       $queryNews->bindParam(":NID", $NID);
@@ -37,25 +39,30 @@ class CommentModel extends Database
         }
     }
 
-    public function insertLike($data)
-    {
-        $query = $this->db->prepare("INSERT INTO likedBy(CID, UID) VALUES (:CID, :UID)");
-        $query->bindParam(":UID", $data['UID']);
-        $query->bindParam(":CID", $data['CID']);
-
-        $query->execute();
-    }
-
-    public function likeBy($data)
+    public function activateLikeButton($data)
     {
         if ($this->hasNotLiked($data)) {
             $query = $this->db->prepare("INSERT INTO likedBy(CID, UID) VALUES (:CID , :UID)");
             $query->bindParam(":CID", $data['CID']);
             $query->bindParam(":UID", $data['UID']);
+            $query->execute();
             
             // Update total likes dalam database
             $queryUpdate = $this->db->prepare("UPDATE comment SET totalLikes=:totalLikes WHERE CID=:CID");
             $updatedLike = $data['totalLikes'] + 1;
+            $queryUpdate->bindParam(":totalLikes", $updatedLike);
+            $queryUpdate->bindParam(":CID", $data['CID']);
+            $queryUpdate->execute();
+            return $queryUpdate->rowCount();
+        } else{
+            $query = $this->db->prepare("DELETE FROM likedBy WHERE UID=:UID AND CID=:CID");
+            $query->bindParam(":CID", $data['CID']);
+            $query->bindParam(":UID", $data['UID']);
+            $query->execute();
+
+            // Update total likes dalam database
+            $queryUpdate = $this->db->prepare("UPDATE comment SET totalLikes=:totalLikes WHERE CID=:CID");
+            $updatedLike = $data['totalLikes'] - 1;
             $queryUpdate->bindParam(":totalLikes", $updatedLike);
             $queryUpdate->bindParam(":CID", $data['CID']);
             $queryUpdate->execute();
