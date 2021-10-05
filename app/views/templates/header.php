@@ -54,18 +54,22 @@
                         </div>
                     </li>
                     <?php } ?>
-
-                    <li class="nav-item" style="margin-right:16px">
-                        <div class="input-group mb-3">
-                            <label class="input-group-text" for="inputGroupSelect01">Category</label>
-                            <select class="form-select" id="inputGroupSelect01">
-                                <option selected>Choose...</option>
-                                <option value="1">Game</option>
-                                <option value="2">Animation</option>
-                                <option value="3">Vtuber</option>
-                            </select>   
-                        </div>
-                    </li>
+                    <form action="<?= base_url ?>" method="POST">
+                        <li class="nav-item" style="margin-right:16px">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelect01">Category</label>
+                                <select class="form-select" id="inputGroupSelect01" name="category">
+                                    <option selected><?php if(isset($data['category'])) echo $data['category'] ?></option>
+                                    <option value="All">All</option>
+                                    <option value="Game">Game</option>
+                                    <option value="Animation">Animation</option>
+                                    <option value="Vtuber">Vtuber</option>
+                                </select>   
+                                <button class="btn btn-warning" type="submit">Go</button>
+                            </div>
+                        </li>
+                    </form>
+                   
 
                     <li class="nav-item">
                         <?php if (isset($_SESSION['loggedin'])) { ?>
