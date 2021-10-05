@@ -93,11 +93,14 @@
         </div>
         <div class="row">
           <div class="col">
-            <?php if (isset($_SESSION['loggedin'])) { ?>
-              <!-- Pass parameter: UID, CID  -->
-              <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ?>" role="button" class="btn btn-primary" style="margin-right:5px">Like ❤️</a>
+            <?php if (isset($_SESSION['loggedin']) && $this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5])) { ?>
+              <!-- Pass parameter: UID, CID, totalLikes, NID -->
+              <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-light" style="margin-right:5px"><?=$comment[6]?> Like ❤️</a>
+            <?php } else if (isset($_SESSION['loggedin']) && !($this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5]))) { ?>
+              <!-- Pass parameter: UID, CID, totalLikes, NID -->
+              <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-primary" style="margin-right:5px"><?=$comment[6]?> Dislike 💔</a>
             <?php } else { ?>
-              <a href="<?= base_url ?>login" role="button" class="btn btn-primary" style="margin-right:5px">Like ❤️</a>
+              <a href="<?= base_url ?>login" role="button" class="btn btn-light" style="margin-right:5px">Like ❤️</a>
             <?php } ?>
           </div>
         </div>
@@ -107,42 +110,5 @@
     <?php
     }
   ?>
-  <div class="row">
-    <div class="col col-md-1">
-      <img src="http://localhost/UTS_webprog/app/views/detail/download.png" class="col-md-12" style="border-radius: 50%">
-    </div>
-    <div class="col col-md-11">
-      <div class="row">
-        <p style="font-weight: bold; font-size:21px; margin-bottom:4px;">honohono416</p>
-      </div>
-      <div class="row">
-        <p style="font-size:18px; margin-bottom:8px;">I made this.</p>
-      </div>
-      <div class="row">
-        <div class="col">
-        <button class="btn btn-light" style="margin-bottom:4px;">Like ❤️</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col col-md-1">
-      <img src="http://localhost/UTS_webprog/app/views/detail/htwh_c8I_400x400.jpg" class="col-md-12" style="border-radius: 50%;">
-    </div>
-    <div class="col col-md-11">
-      <div class="row">
-        <p style="font-weight: bold; font-size:21px; margin-bottom:4px;">穂海ほのほの</p>
-      </div>
-      <div class="row">
-        <p style="font-size:18px; margin-bottom:8px;">I also made this.</p>
-      </div>
-      <div class="row">
-        <div class="col">
-          <button class="btn btn-light" style="margin-bottom:4px;">Like ❤️</button>
-        </div>
-      </div>
-    </div>
-  </div>
   <br>
 </div>
