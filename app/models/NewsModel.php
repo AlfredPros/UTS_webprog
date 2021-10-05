@@ -59,6 +59,7 @@ class NewsModel extends Database
       newsContent=:newsContent
       WHERE NID=:NID
       ");
+      $query->bindParam("NID", $data['NID']);
       $query->bindParam("newsTitle", $data['newsTitle']);
       $query->bindParam("newsCategory", $data['newsCategory']);
       $query->bindParam("newsThumbnail", $data['newsThumbnail']);

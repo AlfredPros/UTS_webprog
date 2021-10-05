@@ -37,7 +37,7 @@
                 <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                 <div class="col">
                     <a href="<?= base_url ?>editnews<?= "/". $news[0] ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
-                    <a href="<?= base_url ?>deletenews<?= "/". $news[0] ?>" role="button" class="btn btn-danger">Delete</a>
+                    <a href="<?= base_url ?>dodeletenews<?= "/". $news[0] ?>" role="button" class="btn btn-danger">Delete</a>
                 </div>
                 <?php } ?>
             </div>
