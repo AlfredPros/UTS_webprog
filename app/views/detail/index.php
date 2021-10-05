@@ -14,27 +14,6 @@
   <p style="font-size:18px">Penerbit: <?= $data['nid'][4] ?></p>
   <br>
 
-
-
-  <h1><strong>Tokyo 7th Sisters</strong><h1>
-  <p style="font-size:21px">November 8, 2016 12:45 PM</p>
-  <br>
-  <p style="font-size:24px">
-    777 FESTIVAL 4thにてイラスト本を出します！よろしくお願い致します。
-  </p>
-  <p style="font-size:24px">
-    ※すべてのイラストの無断転載・無断使用禁止を禁止します。<br>
-    無断で使用、商用目的で使われた場合はご連絡させて頂くことがありますのでご注意ください。<br>
-    <br>
-    プロフィール・仕事のご依頼はコチラから<br>
-    個人活動のご依頼も受け付けてます。（同人、ボカロPV等）。<br>
-    <br>
-    苗字は｢ﾎﾉﾐ｣イラストレーターしてます。<br>
-    【お仕事】pixiv10周年/カードイラスト(企業)/MV制作/同人イラストなど│お仕事募集はHPにて/個人様はスキマかスケブでご依頼下さい。
-  </p>
-  <br>
-  <p style="font-size:18px">Penerbit: 穂海ほのほの☕ご依頼募集中</p>
-  <br>
   <h3 style="padding-bottom:8px">Comment</h3>
   <div class="row">
     <div class="col col-md-1">

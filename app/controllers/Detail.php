@@ -14,11 +14,11 @@ class Detail extends Controller
 	{
 		$data['title'] = 'Detail Berita';
 
-		$some1 = rtrim($_GET['url'], '/');
-		$cool = filter_var($some1, FILTER_SANITIZE_URL);
-		$bro = explode('/', $cool);
+		$url = rtrim($_GET['url'], '/');
+		$urlclean = filter_var($url, FILTER_SANITIZE_URL);
+		$urlget = explode('/', $urlclean);
 
-		$data['nid'] = $this->model('NewsModel')->getNews($bro[1]);
+		$data['nid'] = $this->model('NewsModel')->getNews($urlget[1]);
 
 	
 
