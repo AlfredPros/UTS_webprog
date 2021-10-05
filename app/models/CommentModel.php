@@ -6,8 +6,9 @@ class CommentModel extends Database
     {
       $queryNews = $this->db->prepare("SELECT UID, commentContent, (SELECT username FROM allUser WHERE allUser.UID=comment.UID) AS username, 
       (SELECT profilePhoto FROM allUser WHERE allUser.UID=comment.UID) AS profilePhoto, DATE_FORMAT(commentDate, '%M %D,  %Y %l:%i %p') commentDate from comment 
+       WHERE NID=:NID
        ORDER BY commentDate");
-      $queryNews->bindParam(":NIM", $NID);
+      $queryNews->bindParam(":NID", $NID);
       $queryNews->execute();
       return $queryNews->fetchAll();
     }
@@ -34,6 +35,15 @@ class CommentModel extends Database
         } else {
             return true;
         }
+    }
+
+    public function insertLike($data)
+    {
+        $query = $this->db->prepare("INSERT INTO likedBy(CID, UID) VALUES (:CID, :UID)");
+        $query->bindParam(":UID", $data['UID']);
+        $query->bindParam(":CID", $data['CID']);
+
+        $query->execute();
     }
 
     public function likeBy($data)
