@@ -55,7 +55,6 @@ class NewsModel extends Database
       newsCategory=:newsCategory,
       newsThumbnail=:newsThumbnail,
       newsWriter=:newsWriter,
-      newsPublicationDate=:newsPublicationDate,
       newsContent=:newsContent
       WHERE NID=:NID
       ");
@@ -64,7 +63,6 @@ class NewsModel extends Database
       $query->bindParam("newsCategory", $data['newsCategory']);
       $query->bindParam("newsThumbnail", $data['newsThumbnail']);
       $query->bindParam("newsWriter", $data['newsWriter']);
-      $query->bindParam("newsPublicationDate", $data['newsPublicationDate']);
       $query->bindParam("newsContent", $data['newsContent']);
 
       $query->execute();

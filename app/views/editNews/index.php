@@ -10,12 +10,12 @@
             </div>
             <div class="form-group" style="padding-bottom:15px">
                 <label for="newsCategory">Kategori</label><br>
-                <input class="form-control" list = "newsCategoryList" type="text" id="newsCategory" placeholder= "Game/Animation/Vtuber" name="newsCategory" value="<?= $data['nid'][2] ?>" required>
-                <datalist id="newsCategoryList" name="newsCategory" value="" >
-                    <option value="Game">
-                    <option value="Animation">
-                    <option value="Vtuber">
-                </datalist>
+                <select class="form-select" id="newsCategoryList" name="newsCategory"  required>
+                    <option selected><?= $data['nid'][2] ?></option>
+                    <option value="Game">Game</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Vtuber">Vtuber</option>
+                </select>
             </div>
             <div class="form-group" style="padding-bottom:15px">
                 <label for="newsThumbnail">Thumbnail</label>
