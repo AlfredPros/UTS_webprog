@@ -4,7 +4,9 @@ class CommentModel extends Database
 {
     public function getAllComments($NID)
     {
-      $queryNews = $this->db->prepare("SELECT * from comment WHERE NID=:NID");
+      $queryNews = $this->db->prepare("SELECT UID, commentContent, (SELECT username FROM allUser WHERE allUser.UID=comment.UID) AS username, 
+      (SELECT profilePhoto FROM allUser WHERE allUser.UID=comment.UID) AS profilePhoto, DATE_FORMAT(commentDate, '%M %D,  %Y %l:%i %p') commentDate from comment 
+       ORDER BY commentDate");
       $queryNews->bindParam(":NIM", $NID);
       $queryNews->execute();
       return $queryNews->fetchAll();

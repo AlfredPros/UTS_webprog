@@ -60,6 +60,13 @@ class UserModel extends Database
             return false;
         }
     }
+    public function getUser($userID)
+    {
+        $query = $this->db->prepare("SELECT * FROM allUser WHERE UID=:UID");
+        $query->bindParam(":UID", $userID);
+        $query->execute();
+        return $query->fetch();
+    }
 
     public function isAdmin($data)
     {
