@@ -26,10 +26,11 @@ class CommentModel extends Database
       return $query->rowCount();
     }
 
-    public function hasNotLiked($UID)
+    public function hasNotLiked($UID, $CID)
     {
-        $query = $this->db->prepare("SELECT * FROM likedBy WHERE UID=:UID");
+        $query = $this->db->prepare("SELECT * FROM likedBy WHERE UID=:UID AND CID=:CID");
         $query->bindParam(":UID", $UID);
+        $query->bindParam(":CID", $CID);
         $query->execute();
 
         if ($query->rowCount() > 0) {
@@ -41,7 +42,7 @@ class CommentModel extends Database
 
     public function activateLikeButton($data)
     {
-        if ($this->hasNotLiked($data['UID'])) {
+        if ($this->hasNotLiked($data['UID'], $data['CID'])) {
             $query = $this->db->prepare("INSERT INTO likedBy(CID, UID) VALUES (:CID , :UID)");
             $query->bindParam(":CID", $data['CID']);
             $query->bindParam(":UID", $data['UID']);
