@@ -13,7 +13,7 @@ class NewsModel extends Database
   public function getAllNews()
   {
     $queryNews = $this->db->prepare("SELECT NID, newsTitle, newsCategory, newsThumbnail,
-                                    newsWriter, DATE_FORMAT(newsPublicationDate, '%M %D, %Y'), newsContent FROM news");
+                                    newsWriter, DATE_FORMAT(newsPublicationDate, '%M %D, %Y'), newsContent FROM news ORDER BY newsPublicationDate");
     $queryNews->execute();
     return $queryNews->fetchAll();
   }
@@ -42,6 +42,17 @@ class NewsModel extends Database
   }
 
   public function deleteNews($NID){
+      
+      $deleteLikedBy = $this->db->prepare("DELETE FROM likedby
+      WHERE CID IN ((SELECT CID from comment WHERE NID = :NID));");
+
+      $deleteLikedBy->bindParam(":NID", $NID);
+      $deleteLikedBy->execute();
+    
+      $deleteComments = $this->db->prepare("DELETE FROM comment WHERE NID=:NID");
+      $deleteComments->bindParam(":NID", $NID);
+      $deleteComments->execute();
+    
       $query = $this->db->prepare("DELETE FROM news WHERE NID=:NID");
       $query->bindParam(":NID", $NID);
       $query->execute();
