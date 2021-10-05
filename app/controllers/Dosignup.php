@@ -10,10 +10,11 @@ class Dosignup extends Controller {
         $data['gender'] = strip_tags($_POST['gender']);
         $image_data = file_get_contents(addslashes($_FILES['photo']['tmp_name']));
         $image = base64_encode($image_data);
+        $imageSize = $_FILES['photo']['size'];
         $data['profilePhoto'] = $image;
         
 
-        if ($data['firstName'] != NULL && $data['lastName'] != NULL && $data['username'] != NULL && $password != NULL && $data['birthDate'] != NULL && $data['gender'] != NULL && $data['profilePhoto'] != NULL) {
+        if ($data['firstName'] != NULL && $data['lastName'] != NULL && $data['username'] != NULL && $password != NULL && $data['birthDate'] != NULL && $data['gender'] != NULL && $data['profilePhoto'] != NULL && $imageSize < 697752) {
             $data['password'] = hash('sha512', $password);
 
             $data['title'] = "Do Signup";
@@ -34,9 +35,12 @@ class Dosignup extends Controller {
         }
         else {
             echo "Hacker alert!";
-
-            $_SESSION['alertnotif'] = "Missing input!";
-
+            if ($imageSize > 720000) {
+                $_SESSION['alertnotif'] = "File Size Too Big!";
+            } else {
+                $_SESSION['alertnotif'] = "Missing input!";
+            }
+            
             header('Location: '.base_url.'signup/index');
             die();
         }
