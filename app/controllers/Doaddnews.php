@@ -11,7 +11,7 @@ class Doaddnews extends Controller {
         $data['newsWriter'] = strip_tags($_POST['newsWriter']);
         $data['newsContent'] = $_POST['newsContent'];
 
-        if ($data['newsTitle'] != NULL && $data['newsCategory'] != NULL && $data['newsThumbnail'] != NULL && $data['newsWriter'] != NULL && $data['newsContent'] != NULL && $imageSize < 697752) {
+        if ($data['newsTitle'] != NULL && $data['newsCategory'] != NULL && $data['newsThumbnail'] != NULL && $data['newsWriter'] != NULL && $data['newsContent'] != NULL && $imageSize < maxFileSize) {
             $data['title'] = "Do addnews";
 
             $this->model('NewsModel')->insertNews($data);
@@ -30,8 +30,8 @@ class Doaddnews extends Controller {
         }
         else {
             echo "Missing input";
-            
-            if ($imageSize > 720000) {
+
+            if ($imageSize > maxFileSize) {
                 $_SESSION['alertnotif'] = "File Size Too Big!";
             } else {
                 $_SESSION['alertnotif'] = "Missing input!";
