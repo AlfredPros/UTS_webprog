@@ -93,14 +93,26 @@
         </div>
         <div class="row">
           <div class="col">
-            <?php if (isset($_SESSION['loggedin']) && $this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5])) { ?>
-              <!-- Pass parameter: UID, CID, totalLikes, NID -->
-              <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-light" style="margin-right:5px"><?=$comment[6]?> Like ❤️</a>
-            <?php } else if (isset($_SESSION['loggedin']) && !($this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5]))) { ?>
-              <!-- Pass parameter: UID, CID, totalLikes, NID -->
-              <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-primary" style="margin-right:5px"><?=$comment[6]?> Dislike 💔</a>
+            <?php if ($comment[6] > 0) { ?>
+              <?php if (isset($_SESSION['loggedin']) && $this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5])) { ?>
+                <!-- Pass parameter: UID, CID, totalLikes, NID -->
+                <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-light" style="margin-right:5px"><?=$comment[6]?> Like ❤️</a>
+              <?php } else if (isset($_SESSION['loggedin']) && !($this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5]))) { ?>
+                <!-- Pass parameter: UID, CID, totalLikes, NID -->
+                <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-primary" style="margin-right:5px"><?=$comment[6]?> Dislike 💔</a>
+              <?php } else { ?>
+                <a href="<?= base_url ?>login" role="button" class="btn btn-light" style="margin-right:5px"><?=$comment[6]?> Like ❤️</a>
+              <?php } ?>
             <?php } else { ?>
-              <a href="<?= base_url ?>login" role="button" class="btn btn-light" style="margin-right:5px">Like ❤️</a>
+              <?php if (isset($_SESSION['loggedin']) && $this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5])) { ?>
+                <!-- Pass parameter: UID, CID, totalLikes, NID -->
+                <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-light" style="margin-right:5px">Like ❤️</a>
+              <?php } else if (isset($_SESSION['loggedin']) && !($this->model('CommentModel')->hasNotLiked($_SESSION['loggedin'], $comment[5]))) { ?>
+                <!-- Pass parameter: UID, CID, totalLikes, NID -->
+                <a href="<?= base_url ?>dolike<?= "/". $_SESSION['loggedin'] . "/". $comment[5] ."/". $comment[6] ."/". $data['nid'][0]?>" role="button" class="btn btn-primary" style="margin-right:5px">Dislike 💔</a>
+              <?php } else { ?>
+                <a href="<?= base_url ?>login" role="button" class="btn btn-light" style="margin-right:5px">Like ❤️</a>
+              <?php } ?>
             <?php } ?>
           </div>
         </div>
