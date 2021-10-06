@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>">
+    <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>" draggable="false">
   </div>
   <br>
 
@@ -20,7 +20,7 @@
       ?>
       <div class="row">
         <div class="col col-md-1">
-          <img src="<?= 'data:image/jpg;base64,'.  $data['user'][7] ?>" class="col-md-12" style="border-radius: 50%">
+          <img src="<?= 'data:image/jpg;base64,'.  $data['user'][7] ?>" class="col-md-12" style="border-radius: 50%" draggable="false">
         </div>
         <div class="col col-md-11">
           <div class="row">
@@ -52,7 +52,7 @@
         ?>
   <div class="row">
     <div class="col col-md-1">
-      <img src="http://localhost/UTS_webprog/app/views/detail/qnfa0iQK_400x400.jpg" class="col-md-12" style="border-radius: 50%">
+      <img src="http://localhost/UTS_webprog/app/views/detail/qnfa0iQK_400x400.jpg" class="col-md-12" style="border-radius: 50%" draggable="false">
     </div>
     <div class="col col-md-11">
       <div class="row">
@@ -81,7 +81,7 @@
       ?>
       <div class="row">
       <div class="col col-md-1">
-        <img src="<?= 'data:image/jpg;base64,'.  $comment[3] ?>" class="col-md-12" style="border-radius: 50%">
+        <img src="<?= 'data:image/jpg;base64,'.  $comment[3] ?>" class="col-md-12" style="border-radius: 50%" draggable="false">
       </div>
       <div class="col col-md-11">
         <div class="row">

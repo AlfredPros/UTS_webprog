@@ -24,7 +24,7 @@
         <div class="col-md-4 offset-md-4">
             <a href="<?= base_url ?>detail<?= "/". $data['allnews'][0][0] ?>">
                 <div class="row">
-                    <img src="<?= 'data:image/jpg;base64,'.  $data['allnews'][0][3] ?>" alt="" style="padding-bottom:8px">
+                    <img src="<?= 'data:image/jpg;base64,'.  $data['allnews'][0][3] ?>" alt="" style="padding-bottom:8px" draggable="false">
                 </div>
             </a>
             <div class="row">
@@ -63,7 +63,7 @@
         <div class="col-md-4">
             <a href="<?= base_url ?>detail<?= "/". $news[0] ?>">
                 <div class="row">
-                    <img src="<?= 'data:image/jpg;base64,'.  $news[3] ?>" alt="" style="padding-bottom:8px">
+                    <img src="<?= 'data:image/jpg;base64,'.  $news[3] ?>" alt="" style="padding-bottom:8px" draggable="false">
                 </div>
             </a>
             <div class="row">
