@@ -18,13 +18,6 @@ class Doeditnews extends Controller {
             $this->model('NewsModel')->updateNews($data);
 
             $_SESSION['alertnotif'] = "News Edited!";
-            
-            /*
-            $this->view('templates/header', $data);
-            echo $email . " " . $password . " " . $hash;
-            echo '<br>' . $firstname . $lastname;
-            $this->view('templates/footer');
-            */
 
             header('Location: '.base_url.'index');
             die();
@@ -42,35 +35,5 @@ class Doeditnews extends Controller {
             die();
         }
 
-
-
-        /*
-        $data['password'] = strip_tags($_POST['password']);
-        $data['conpassword'] = strip_tags($_POST['conpassword']);
-
-        if ($data['password'] == $data['conpassword']) {
-            $data['salt'] = strip_tags($_POST['salt']);
-
-            $pass_salt = $data['password'] . $data['salt'];
-            $hash = md5($pass_salt);
-
-            $this->model('UserModel')->insertUser($username, $hash, $data['salt']);
-
-            $this->view('templates/header', $data);
-            echo $username . " " . $hash . " " . $pass_salt;
-            $this->view('templates/footer');
-
-            $_SESSION['successNotif'] = "User registered!";
-
-            header('Location: '.base_url.'index');
-            die();
-        }
-        else {
-            $_SESSION['alertNotif'] = "Confirm password wrong!";
-
-            header('Location: '.base_url.'register/index');
-            die();
-        }
-        */
     }
 }

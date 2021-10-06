@@ -9,7 +9,7 @@ class CommentModel extends Database
        CID, totalLikes
        from comment 
        WHERE NID=:NID
-       ORDER BY commentDate");
+       ORDER BY commentDate DESC");
       $queryNews->bindParam(":NID", $NID);
       $queryNews->execute();
       return $queryNews->fetchAll();

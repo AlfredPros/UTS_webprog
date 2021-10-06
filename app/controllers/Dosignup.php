@@ -22,19 +22,12 @@ class Dosignup extends Controller {
             $this->model('UserModel')->insertUser($data);
 
             $_SESSION['alertnotif'] = "Account signed up!";
-            
-            /*
-            $this->view('templates/header', $data);
-            echo $email . " " . $password . " " . $hash;
-            echo '<br>' . $firstname . $lastname;
-            $this->view('templates/footer');
-            */
 
             header('Location: '.base_url.'index');
             die();
         }
         else {
-            echo "Hacker alert!";
+            echo "Something wrong alert!";
             if ($imageSize > maxFileSize) {
                 $_SESSION['alertnotif'] = "File Size Too Big!";
             } else {
@@ -44,36 +37,5 @@ class Dosignup extends Controller {
             header('Location: '.base_url.'signup/index');
             die();
         }
-
-
-
-        /*
-        $data['password'] = strip_tags($_POST['password']);
-        $data['conpassword'] = strip_tags($_POST['conpassword']);
-
-        if ($data['password'] == $data['conpassword']) {
-            $data['salt'] = strip_tags($_POST['salt']);
-
-            $pass_salt = $data['password'] . $data['salt'];
-            $hash = md5($pass_salt);
-
-            $this->model('UserModel')->insertUser($username, $hash, $data['salt']);
-
-            $this->view('templates/header', $data);
-            echo $username . " " . $hash . " " . $pass_salt;
-            $this->view('templates/footer');
-
-            $_SESSION['successNotif'] = "User registered!";
-
-            header('Location: '.base_url.'index');
-            die();
-        }
-        else {
-            $_SESSION['alertNotif'] = "Confirm password wrong!";
-
-            header('Location: '.base_url.'register/index');
-            die();
-        }
-        */
     }
 }

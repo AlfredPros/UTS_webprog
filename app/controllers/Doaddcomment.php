@@ -2,9 +2,9 @@
 
 class Doaddcomment extends Controller {
     public function index() {
-        $data['UID'] = $_SESSION['loggedin'];
-        $data['NID'] = $_POST['NID'];
-        $data['commentContent'] = $_POST['comment'];
+        $data['UID'] = strip_tags($_SESSION['loggedin']);
+        $data['NID'] = strip_tags($_POST['NID']);
+        $data['commentContent'] = strip_tags($_POST['comment']);
 
         if ($data['UID'] != NULL && $data['NID'] != NULL && $data['commentContent'] != NULL) {
             $data['title'] = "Do Add Comment";
@@ -21,36 +21,5 @@ class Doaddcomment extends Controller {
             header('Location: '.base_url.'details/'.$data['NID']);
             die();
         }
-
-
-
-        /*
-        $data['password'] = strip_tags($_POST['password']);
-        $data['conpassword'] = strip_tags($_POST['conpassword']);
-
-        if ($data['password'] == $data['conpassword']) {
-            $data['salt'] = strip_tags($_POST['salt']);
-
-            $pass_salt = $data['password'] . $data['salt'];
-            $hash = md5($pass_salt);
-
-            $this->model('UserModel')->insertUser($username, $hash, $data['salt']);
-
-            $this->view('templates/header', $data);
-            echo $username . " " . $hash . " " . $pass_salt;
-            $this->view('templates/footer');
-
-            $_SESSION['successNotif'] = "User registered!";
-
-            header('Location: '.base_url.'index');
-            die();
-        }
-        else {
-            $_SESSION['alertNotif'] = "Confirm password wrong!";
-
-            header('Location: '.base_url.'register/index');
-            die();
-        }
-        */
     }
 }

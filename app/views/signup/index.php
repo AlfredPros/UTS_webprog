@@ -25,12 +25,11 @@
             </div>
             <div class="form-group" style="padding-bottom:15px">
                 <label for="gender">Jenis Kelamin</label><br>
-                <input class="form-control" list="genderList" type="text" id="gender" placeholder= "Male/Female" name="gender" required>
-                <datalist id="genderList" name="gender" value="" >
-                    <option value="Male">
-                    <option value="Female">
-                    <option value="Other">
-                </datalist>
+                <select class="form-select" id="genderList" name="gender" placeholder="Male/Female" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
             <div class="form-group" style="padding-bottom:15px">
                 <label for="photo">Foto Profil</label>
