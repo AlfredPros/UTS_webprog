@@ -20,7 +20,8 @@ class NewsModel extends Database
 
   public function getNewsByCategory($category)
   {
-    $queryNews = $this->db->prepare("SELECT * from news WHERE newsCategory=:newsCategory ORDER BY newsPublicationDate DESC");
+    $queryNews = $this->db->prepare("SELECT NID, newsTitle, newsCategory, newsThumbnail,
+    newsWriter, DATE_FORMAT(newsPublicationDate, '%M %D, %Y'), newsContent from news WHERE newsCategory=:newsCategory ORDER BY newsPublicationDate DESC");
     $queryNews->bindParam(":newsCategory", $category);
     $queryNews->execute();
     return $queryNews->fetchAll();
