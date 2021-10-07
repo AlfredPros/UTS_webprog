@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="row">
-                <p style="font-size: medium; padding-bottom:8px"><?= $data['allnews'][0][2] ?></p>
+                <a href="<?= base_url ?>\<?= $data['allnews'][0][2] ?>" style="font-size: medium; padding-bottom:8px"><?= $data['allnews'][0][2] ?></a>
             </div>
         </div>
     </div>
@@ -79,7 +79,7 @@
                 </div>
             </div>
             <div class="row">
-                <p style="font-size: small; padding-bottom:8px"><?= $news[2] ?></p>
+            <a href="<?= base_url ?>\<?= $data['allnews'][0][2] ?>" style="font-size: small; padding-bottom:8px"><?= $news[2] ?></a>
             </div>
         </div>
     <?php 
