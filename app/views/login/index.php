@@ -1,6 +1,6 @@
 
 <!-- Form -->
-<div class="container" style="padding-top:25px">
+<div class="container" style="padding-top: 9%; padding-bottom: 9%;">
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>/dologin" class="col-md-6">
             <div class="form-group" style="padding-bottom:15px">

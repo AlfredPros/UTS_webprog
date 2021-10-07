@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?= $data['title'] ?> </title>
+    <link rel="icon" href="http://localhost/UTS_webprog/design/anime_news_icon.png">
 
     <!-- Bootstrap and jQuery -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -35,7 +36,7 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F1F4F5">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#C90000;">
         <div class="container-fluid">
             <a class="navbar-brand" href=<?= base_url ?> style="">Anime News</a>
             <!-- Button for smaller-size -->
@@ -86,3 +87,5 @@
             </div>
         </div>
     </nav>
+</body>
+</html>
