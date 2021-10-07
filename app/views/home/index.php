@@ -1,13 +1,4 @@
-<div class="container">
-    <?php
-        if (isset($_SESSION['alertnotif'])) {
-            echo $_SESSION['alertnotif'];
-            unset($_SESSION['alertnotif']);
-        }
-        if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
-            echo '<br>Admin!!!';
-        }
-    ?>
+<div class="container" style="padding-top: 25px; padding-bottom: 25px">
     <br>
 
     <?php

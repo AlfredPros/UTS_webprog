@@ -1,4 +1,6 @@
-<div class="container">
+<div class="container" style="padding-top: 25px">
+  <h1 style="color: #C90000;"><strong>Tokyo 7th Sisters</strong><h1>
+  <p style="font-size:medium; color: #C90000;">November 8, 2016 12:45 PM</p>
   <div class="row">
     <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>" draggable="false">
   </div>
@@ -56,7 +58,7 @@
     </div>
     <div class="col col-md-11">
       <div class="row">
-        <p style="font-weight: bold; font-size:21px; margin-bottom:4px;">honohono0416</p>
+        <p style="font-weight: bold; font-size:large; margin-bottom:4px;">honohono0416</p>
       </div>
       <form class="form-group">
         <div class="row">
