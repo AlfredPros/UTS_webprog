@@ -19,7 +19,7 @@ class Doeditnews extends Controller {
 
             //$_SESSION['alertnotif'] = "News Edited!";
 
-            header('Location: '.base_url.'index');
+            header('Location: '.base_url);
             die();
         }
         else {

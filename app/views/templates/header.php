@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?= $data['title'] ?> </title>
-    <link rel="icon" href="../app/views/templates/anime_news_icon.png">
+    <link rel="icon" href="<?= base_img ?>anime_news_icon.png">
 
     <!-- Bootstrap and jQuery -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -18,13 +18,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 	<style>
-        body {
-            background-image: url("../app/views/templates/92752671_p0.jpg");
-            background-position: top left, top middle;
-            background-repeat: repeat-xy;
-            background-size: 100%; 
-            background-attachment: scroll;  
-        }
         @font-face {
             font-family: 'Allerta';
             font-style: normal;
@@ -39,6 +32,13 @@
         .btn-login:hover{
             background-color: #800000;
             color: white;
+        }
+        body {
+            background-image: url("<?= base_img ?>92752671_p0.jpg");
+            background-position: top left, top middle;
+            background-repeat: repeat-xy;
+            background-size: 100%; 
+            background-attachment: scroll;  
         }
         footer {
                 position: relative;
@@ -56,8 +56,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#C90000;">
         <div class="container-fluid">
-            <a class="navbar-brand" href=<?= base_url ?> style="">
-                <img src="../app/views/templates/anime_news_logo_white.png" width="200">
+            <a class="navbar-brand" href="<?= base_url ?>" style="">
+                <img src="<?= base_img ?>anime_news_logo_white.png" width="200">
             </a>
             <!-- Button for smaller-size -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

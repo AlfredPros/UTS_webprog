@@ -9,6 +9,13 @@ class Detail extends Controller
 		$urlclean = filter_var($url, FILTER_SANITIZE_URL);
 		$urlget = explode('/', $urlclean);
 
+		/*
+		echo "get: ".$_GET['url'] ."<br>";
+		echo "url: ".$url ."<br>";
+		echo "cln: ".$urlclean ."<br>";
+		var_dump($urlget);
+		*/
+
 		$data['nid'] = $this->model('NewsModel')->getNews($urlget[1]);
 
 		if (isset($_SESSION['loggedin'])) $data['user'] = $this->model('UserModel')->getUser($_SESSION['loggedin']);
@@ -16,8 +23,10 @@ class Detail extends Controller
 		$data['title'] = $data['nid'][1];
 		$data['comments'] = $this->model("CommentModel")->getAllComments($urlget[1]);		
 
+		
 		$this->view('templates/header', $data);
 		$this->view('detail/index', $data);
 		$this->view('templates/footer');
+		
 	}
 }

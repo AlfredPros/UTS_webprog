@@ -1,3 +1,4 @@
+
 <div class="container" style="padding-top: 25px" data-aos="fade">
   <div class="row">
     <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>" style="padding-bottom:8px; object-fit: cover; height: 500px; border-radius: 50px;" draggable="false">
@@ -52,7 +53,7 @@
         ?>
   <div class="row">
     <div class="col col-md-1">
-      <img src="../app/views/templates/qnfa0iQK_400x400.jpg" class="col-md-12" style="border-radius: 50%" draggable="false">
+      <img src="<?= base_img ?>qnfa0iQK_400x400.jpg" class="col-md-12" style="border-radius: 50%" draggable="false">
     </div>
     <div class="col col-md-11">
       <div class="row">

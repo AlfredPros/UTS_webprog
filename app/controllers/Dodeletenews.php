@@ -12,7 +12,7 @@ class Dodeletenews extends Controller {
 
         //$_SESSION['alertnotif'] = "News Deleted!";
 
-        header('Location: '.base_url.'index');
+        header('Location: '.base_url);
         die();
 
     }

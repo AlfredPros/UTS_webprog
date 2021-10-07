@@ -5,14 +5,14 @@
     <?php if (isset($data['allnews'][0])) { ?>
     <div class="row" data-aos="fade-down">
         <div class="col-md-12">
-            <a href="<?= base_url ?>detail<?= "/". $data['allnews'][0][0] ?>">
+            <a href="<?= base_url ."detail/". $data['allnews'][0][0]?>">
                 <div class="row">
                     <img src="<?= 'data:image/jpg;base64,'.  $data['allnews'][0][3] ?>" alt="" style="padding-bottom:8px; object-fit: cover; height: 350px; border-radius: 50px;" draggable="false">
                 </div>
             </a>
             <div class="row">
                 <div class="col">
-                    <a href="<?= base_url ?>detail<?= "/". $data['allnews'][0][0] ?>" style="text-transform: uppercase; color: #C90000; text-decoration: none;">
+                    <a href="<?= base_url ?>detail<?= "?". $data['allnews'][0][0] ?>" style="text-transform: uppercase; color: #C90000; text-decoration: none;">
                         <strong><p style="font-size: x-large; "><?= $data['allnews'][0][1] ?></p></strong>
                     </a>
                 </div>

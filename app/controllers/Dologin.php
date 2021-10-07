@@ -22,7 +22,7 @@ class Dologin extends Controller {
                     $_SESSION['admin'] = $isadmin;
                     //$_SESSION['alertnotif'] = "Account logged in!";
 
-                    header('Location: '.base_url.'index');
+                    header('Location: '.base_url);
                     die();
                 }
                 else {
@@ -30,7 +30,7 @@ class Dologin extends Controller {
     
                     $_SESSION['alertnotif'] = "Wrong username or password!";
         
-                    header('Location: '.base_url.'login/index');
+                    header('Location: '.base_url.'login');
                     die();
                 }
             }
@@ -39,7 +39,7 @@ class Dologin extends Controller {
     
                 $_SESSION['alertnotif'] = "Recaptcha wrong!";
     
-                header('Location: '.base_url.'login/index');
+                header('Location: '.base_url.'login');
                 die();
             }
         }
@@ -48,7 +48,7 @@ class Dologin extends Controller {
 
             $_SESSION['alertnotif'] = "Missing input!";
 
-            header('Location: '.base_url.'login/index');
+            header('Location: '.base_url.'login');
             die();
         }
 

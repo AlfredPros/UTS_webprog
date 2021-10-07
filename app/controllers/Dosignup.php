@@ -23,7 +23,7 @@ class Dosignup extends Controller {
 
             //$_SESSION['alertnotif'] = "Account signed up!";
 
-            header('Location: '.base_url.'index');
+            header('Location: '.base_url);
             die();
         }
         else {
@@ -34,7 +34,7 @@ class Dosignup extends Controller {
                 $_SESSION['alertnotif'] = "Missing input!";
             }
 
-            header('Location: '.base_url.'signup/index');
+            header('Location: '.base_url.'signup');
             die();
         }
     }

@@ -18,7 +18,7 @@ class Doaddnews extends Controller {
 
             //$_SESSION['alertnotif'] = "News Added!";
             
-            header('Location: '.base_url.'index');
+            header('Location: '.base_url);
             die();
         }
         else {
@@ -30,7 +30,7 @@ class Doaddnews extends Controller {
                 $_SESSION['alertnotif'] = "Missing input!";
             }
             
-            header('Location: '.base_url.'addnews/index');
+            header('Location: '.base_url.'addnews');
             die();
         }
 
