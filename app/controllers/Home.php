@@ -4,12 +4,22 @@ class Home extends Controller
 {
 	public function index()
 	{
-		$data['title'] = 'Home AnimeNews';
-		
-		if (!isset($_POST['category'])) {
-			$category = 'All';
+		$data['title'] = 'Home Animenews';
+
+		if (isset($_GET['url'])) {
+			$url = rtrim($_GET['url'], '/');
+			$urlclean = filter_var($url, FILTER_SANITIZE_URL);
+			$urlget = explode('/', $urlclean);
+		}
+	
+		if (isset($urlget[0])) {
+			$category = $urlget[0];
 		} else {
-			$category = $_POST['category'];
+			if (!isset($_POST['category'])) {
+				$category = 'All';
+			} else {
+				$category = $_POST['category'];
+			}
 		}
 
 		switch ($category) {
