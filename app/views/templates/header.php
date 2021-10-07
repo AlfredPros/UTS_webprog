@@ -32,13 +32,24 @@
 		tr.shown td.details-control {
 			background: url( <?='../app/view/home/details_close.png' ?> ) no-repeat center center;
 		}
+        .btn-login{
+            background-color: #C90000;
+            color: white;
+            border-color: white;
+        }
+        .btn-login:hover{
+            background-color: #800000;
+            color: white;
+        }
 	</style>
     
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#C90000;">
         <div class="container-fluid">
-            <a class="navbar-brand" href=<?= base_url ?> style="">Anime News</a>
+            <a class="navbar-brand" href=<?= base_url ?> style="">
+                <img src="http://localhost/UTS_webprog/design/anime_news_logo_white.png" width="200">
+            </a>
             <!-- Button for smaller-size -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,7 +61,7 @@
                     <li class="nav-item" style="margin-right:16px">
                         <div class="input-group mb-3">
                             <a href="<?= base_url ?>/addnews">
-                                <button class="btn btn-primary">+Create News</button>
+                                <button class="btn btn-login">+Create News</button>
                             </a>
                         </div>
                     </li>
@@ -58,8 +69,8 @@
                     <form action="<?= base_url ?>" method="POST">
                         <li class="nav-item" style="margin-right:16px">
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Category</label>
-                                <select class="form-select" id="inputGroupSelect01" name="category">
+                                <label class="input-group-text" for="inputGroupSelect01" style="background-color: #C90000; color: white;">Category</label>
+                                <select class="form-select" id="inputGroupSelect01" name="category" style="width: 150px">
                                     <option selected><?php if(isset($data['category'])) echo $data['category'] ?></option>
                                     <option value="All">All</option>
                                     <option value="Game">Game</option>
@@ -79,7 +90,7 @@
                         </a>
                         <?php } else { ?>
                         <a href="<?= base_url ?>login">
-                            <button class="btn btn-primary">Login</button>
+                            <button class="btn btn-login">Login</button>
                         </a>
                         <?php } ?>
                     </li>
