@@ -11,7 +11,7 @@
 
     <!-- Hightlight -->
     <?php if (isset($data['allnews'][0])) { ?>
-    <div class="row">
+    <div class="row" data-aos="fade-down">
         <div class="col-md-12">
             <a href="<?= base_url ?>detail<?= "/". $data['allnews'][0][0] ?>">
                 <div class="row">
@@ -51,7 +51,7 @@
     <?php 
         foreach(array_slice($data['allnews'],1) as $news) {
     ?>
-        <div class="col-md-4">
+        <div class="col-md-4" data-aos="fade-up" data-aos-offset="60">
             <a href="<?= base_url ?>detail<?= "/". $news[0] ?>">
                 <div class="row">
                     <img src="<?= 'data:image/jpg;base64,'.  $news[3] ?>" alt="" style="padding-bottom:8px; object-fit: cover; height: 250px; border-radius: 50px;" draggable="false">

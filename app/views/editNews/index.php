@@ -1,6 +1,6 @@
 
 <!-- Form -->
-<div class="container" style="padding-top: 4%">
+<div class="container" style="padding-top: 4%" data-aos="fade">
     <div class="row text-center" style="margin-bottom: 28px;">
         <h1>Edit News</h1>
     </div>

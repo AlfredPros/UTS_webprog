@@ -1,4 +1,4 @@
-<div class="container" style="padding-top: 25px">
+<div class="container" style="padding-top: 25px" data-aos="fade">
   <div class="row">
     <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>" style="padding-bottom:8px; object-fit: cover; height: 500px; border-radius: 50px;" draggable="false">
   </div>
@@ -79,8 +79,8 @@
   <?php
     foreach ($data['comments'] as $comment) {
       ?>
-      <div class="row">
-      <div class="col col-md-1">
+      <div class="row" data-aos="fade" data-aos-offset="80">
+      <div class="col col-md-1" >
         <img src="<?= 'data:image/jpg;base64,'.  $comment[3] ?>" class="col-md-12" style="object-fit: cover; width: 100%; border-radius: 50%" draggable="false">
       </div>
       <div class="col col-md-11">

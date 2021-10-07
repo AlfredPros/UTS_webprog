@@ -1,6 +1,6 @@
 
 <!-- Form -->
-<div class="container" style="padding-top: 3%; padding-bottom: 9%;">
+<div class="container" style="padding-top: 3%; padding-bottom: 9%;" data-aos="fade">
     <div class="row text-center" style="margin-bottom: 28px;">
         <h1>Login</h1>
     </div>
