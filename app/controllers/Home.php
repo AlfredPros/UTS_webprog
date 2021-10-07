@@ -11,7 +11,7 @@ class Home extends Controller
 			$urlclean = filter_var($url, FILTER_SANITIZE_URL);
 			$urlget = explode('/', $urlclean);
 		}
-	
+
 		if (isset($urlget[0])) {
 			$category = $urlget[0];
 		} else {
