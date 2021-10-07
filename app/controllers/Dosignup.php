@@ -21,7 +21,7 @@ class Dosignup extends Controller {
 
             $this->model('UserModel')->insertUser($data);
 
-            $_SESSION['alertnotif'] = "Account signed up!";
+            //$_SESSION['alertnotif'] = "Account signed up!";
 
             header('Location: '.base_url.'index');
             die();

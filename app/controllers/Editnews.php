@@ -4,7 +4,7 @@ class Editnews extends Controller
 {
 	public function index()
 	{
-		$data['title'] = 'Edit Berita';
+		$data['title'] = 'Edit News';
 
 		$url = rtrim($_GET['url'], '/');
 		$urlclean = filter_var($url, FILTER_SANITIZE_URL);

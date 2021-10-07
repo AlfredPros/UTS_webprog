@@ -11,7 +11,7 @@
     <?= $data['nid'][6] ?>
   </p>
   <br>
-  <p style="font-size:21px">Penulis: <?= $data['nid'][4] ?></p>
+  <p style="font-size:21px">Writer: <?= $data['nid'][4] ?></p>
   <br>
 
   <h3 style="padding-bottom:8px; color: #C90000;">Comment</h3>

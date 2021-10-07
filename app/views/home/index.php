@@ -1,14 +1,6 @@
 <div class="container" style="padding-top: 25px; padding-bottom: 25px">
     <br>
 
-    <?php
-        //var_dump($data['allnews']);
-        /*
-        echo '<img src="data:image/jpg;base64,'.  $data['allnews'][0][3]  .'"/>';
-        echo '<img src="data:image/jpg;base64,'.  $data['allnews'][1][3]  .'"/>';
-        */
-    ?>
-
     <!-- Hightlight -->
     <?php if (isset($data['allnews'][0])) { ?>
     <div class="row" data-aos="fade-down">
@@ -26,8 +18,8 @@
                 </div>
                 <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                 <div class="col col-auto">
-                    <a href="<?= base_url ?>editnews<?= "/". $data['allnews'][0][0] ?>" role="button" class="btn btn-primary" style="margin-right:5px;">Edit</a>
-                    <a href="<?= base_url ?>dodeletenews<?= "/". $data['allnews'][0][0] ?>" role="button" class="btn btn-danger">Delete</a>
+                    <a href="<?= base_url ?>editnews<?= "/". $data['allnews'][0][0] ?>" role="button" class="btn btn-primary" style="margin-right:5px;">🛠️</a>
+                    <a href="<?= base_url ?>dodeletenews<?= "/". $data['allnews'][0][0] ?>" role="button" class="btn btn-danger">🗑️</a>
                 </div>
                 <?php } ?>
             </div>
@@ -65,8 +57,8 @@
                 </div>
                 <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                 <div class="col col-auto">
-                    <a href="<?= base_url ?>editnews<?= "/". $news[0] ?>" role="button" class="btn btn-primary" style="margin-right:5px">Edit</a>
-                    <a href="<?= base_url ?>dodeletenews<?= "/". $news[0] ?>" role="button" class="btn btn-danger">Delete</a>
+                    <a href="<?= base_url ?>editnews<?= "/". $news[0] ?>" role="button" class="btn btn-primary" style="margin-right:5px">🛠️</a>
+                    <a href="<?= base_url ?>dodeletenews<?= "/". $news[0] ?>" role="button" class="btn btn-danger">🗑️</a>
                 </div>
                 <?php } ?>
             </div>

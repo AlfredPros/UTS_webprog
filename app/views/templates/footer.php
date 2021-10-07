@@ -16,7 +16,7 @@
     </head>
     <body>
         <footer>
-            <p><b>Dibuat dengan Penuh Cinta oleh Kelompok Kawai-Desu</b></p>
+            <p><b>"With the love of the Kawai-desu group"<br>「カワイデスグループの愛を込めて」</b></p>
             <img src="http://localhost/UTS_webprog/design/anime_news_logo_white.png" alt="" width="200">
         </footer>
     </body>

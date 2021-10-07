@@ -4,7 +4,6 @@ class Detail extends Controller
 {
 	public function index()
 	{
-		$data['title'] = 'Detail Berita';
 
 		$url = rtrim($_GET['url'], '/');
 		$urlclean = filter_var($url, FILTER_SANITIZE_URL);
@@ -14,7 +13,8 @@ class Detail extends Controller
 
 		if (isset($_SESSION['loggedin'])) $data['user'] = $this->model('UserModel')->getUser($_SESSION['loggedin']);
 
-		$data['comments'] = $this->model("CommentModel")->getAllComments($urlget[1]);
+		$data['title'] = $data['nid'][1];
+		$data['comments'] = $this->model("CommentModel")->getAllComments($urlget[1]);		
 
 		$this->view('templates/header', $data);
 		$this->view('detail/index', $data);

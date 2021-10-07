@@ -4,7 +4,7 @@ class Home extends Controller
 {
 	public function index()
 	{
-		$data['title'] = 'Halaman Home';
+		$data['title'] = 'Home AnimeNews';
 		
 		if (!isset($_POST['category'])) {
 			$category = 'All';

@@ -4,7 +4,7 @@ class Signup extends Controller
 {
 	public function index()
 	{
-		$data['title'] = 'Detail Berita';
+		$data['title'] = 'Sign Up';
 
 		$this->view('templates/header', $data);
 		$this->view('signup/index', $data);

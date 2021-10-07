@@ -4,7 +4,7 @@ class Addnews extends Controller
 {
 	public function index()
 	{
-		$data['title'] = 'Tambah Berita';
+		$data['title'] = 'Add News';
 
 		$this->view('templates/header', $data);
 		$this->view('addnews/index', $data);

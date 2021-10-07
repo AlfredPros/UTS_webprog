@@ -10,7 +10,7 @@ class Dodeletenews extends Controller {
 
         $this->model('NewsModel')->deleteNews($urlget[1]);
 
-        $_SESSION['alertnotif'] = "News Deleted!";
+        //$_SESSION['alertnotif'] = "News Deleted!";
 
         header('Location: '.base_url.'index');
         die();

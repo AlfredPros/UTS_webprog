@@ -16,7 +16,7 @@ class Doaddnews extends Controller {
 
             $this->model('NewsModel')->insertNews($data);
 
-            $_SESSION['alertnotif'] = "News Added!";
+            //$_SESSION['alertnotif'] = "News Added!";
             
             header('Location: '.base_url.'index');
             die();

@@ -2,7 +2,7 @@
 <!-- Form -->
 <div class="container" style="padding-top: 3%; padding-bottom: 9%;" data-aos="fade">
     <div class="row text-center" style="margin-bottom: 28px;">
-        <h1>Login</h1>
+        <h1 style="color:#c90000">Login</h1>
     </div>
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>/dologin" class="col-md-6">

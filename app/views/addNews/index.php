@@ -2,16 +2,16 @@
 <!-- Form -->
 <div class="container" style="padding-top: 4%" data-aos="fade">
     <div class="row text-center" style="margin-bottom: 28px;">
-        <h1>Add News</h1>
+        <h1 style="color:#c90000">Add News</h1>
     </div>
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>doaddnews" class="col-md-6" enctype="multipart/form-data">
             <div class="form-group" style="padding-bottom:15px">
-                <label for="newsTitle">Judul Berita</label>
-                <input type="text" class="form-control" id="newsTitle" name="newsTitle" placeholder="Berita Baru" value="" required>
+                <label for="newsTitle">News Title</label>
+                <input type="text" class="form-control" id="newsTitle" name="newsTitle" placeholder="News Title" value="" required>
             </div>
             <div class="form-group" style="padding-bottom:15px">
-                <label for="newsCategory">Kategori</label><br>
+                <label for="newsCategory">Category</label><br>
                 <select class="form-select" id="newsCategoryList" name="newsCategory" placeholder="Game/Animation/Video" required>
                     <option value="Game">Game</option>
                     <option value="Animation">Animation</option>
@@ -25,11 +25,11 @@
                 </div>
             </div>
             <div class="form-group" style="padding-bottom:15px">
-                <label for="newsWriter">Penerbit</label>
+                <label for="newsWriter">Writer</label>
                 <input type="text" class="form-control" id="newsWriter" name="newsWriter" placeholder="John Dough" value="" required>
             </div>
             <div class="form-group" style="padding-bottom:15px">
-                <label for="newsContent">Konten Berita</label>
+                <label for="newsContent">News Content</label>
                 <textarea rows='4' class="form-control" id="newsContent" name="newsContent" placeholder="Lorem ipsum dolor sit amet." value="" required></textarea>
             </div>
 

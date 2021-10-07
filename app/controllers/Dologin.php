@@ -20,7 +20,7 @@ class Dologin extends Controller {
 
                     $_SESSION['loggedin'] = $user;
                     $_SESSION['admin'] = $isadmin;
-                    $_SESSION['alertnotif'] = "Account logged in!";
+                    //$_SESSION['alertnotif'] = "Account logged in!";
 
                     header('Location: '.base_url.'index');
                     die();

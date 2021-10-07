@@ -17,7 +17,7 @@ class Doeditnews extends Controller {
 
             $this->model('NewsModel')->updateNews($data);
 
-            $_SESSION['alertnotif'] = "News Edited!";
+            //$_SESSION['alertnotif'] = "News Edited!";
 
             header('Location: '.base_url.'index');
             die();
