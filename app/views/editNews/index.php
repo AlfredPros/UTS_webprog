@@ -1,6 +1,9 @@
 
 <!-- Form -->
-<div class="container" style="padding-top:25px">
+<div class="container" style="padding-top: 4%">
+    <div class="row text-center" style="margin-bottom: 28px;">
+        <h1>Edit News</h1>
+    </div>
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>doeditnews" class="col-md-6" enctype="multipart/form-data">
             <input type="hidden" name="NID" value="<?= $data['nid'][0] ?>" required>
@@ -40,8 +43,8 @@
             }
             ?>
 
-            <button type="submit" class="btn btn-primary" style="margin-right:5px">Submit</button>
-            <a href="<?= base_url ?>" class="btn btn-secondary" role="button" style="margin-right:5px">Cancel</a>
+            <button type="submit" class="btn btn-primary" style="margin-top: 21px; margin-right:5px">Submit</button>
+            <a href="<?= base_url ?>" class="btn btn-secondary" role="button" style="margin-top: 21px; margin-right:5px">Cancel</a>
         </form>
     </div>
 </div>

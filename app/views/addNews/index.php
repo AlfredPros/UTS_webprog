@@ -1,6 +1,9 @@
 
 <!-- Form -->
-<div class="container" style="padding-top:25px">
+<div class="container" style="padding-top: 4%">
+    <div class="row text-center" style="margin-bottom: 28px;">
+        <h1>Add News</h1>
+    </div>
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>doaddnews" class="col-md-6" enctype="multipart/form-data">
             <div class="form-group" style="padding-bottom:15px">
@@ -38,8 +41,8 @@
             }
             ?>
 
-            <button type="submit" class="btn btn-primary" style="margin-right:5px">Submit</button>
-            <a href="<?= base_url ?>" class="btn btn-secondary" role="button" style="margin-right:5px">Cancel</a>
+            <button type="submit" class="btn btn-primary" style="margin-top: 21px; margin-right:5px">Submit</button>
+            <a href="<?= base_url ?>" class="btn btn-secondary" role="button" style="margin-top: 21px; margin-right:5px">Cancel</a>
         </form>
     </div>
 </div>

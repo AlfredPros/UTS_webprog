@@ -55,7 +55,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top: 10px;">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <?php if (isset($_SESSION['admin']) && $_SESSION['admin'] == true) { ?>
                     <li class="nav-item" style="margin-right:16px">
@@ -70,7 +70,7 @@
                         <li class="nav-item" style="margin-right:16px">
                             <div class="input-group mb-3">
                                 <label class="input-group-text" for="inputGroupSelect01" style="background-color: #C90000; color: white;">Category</label>
-                                <select class="form-select" id="inputGroupSelect01" name="category" style="width: 150px">
+                                <select class="form-select" id="inputGroupSelect01" name="category" style="color: #C90000; width: 150px">
                                     <option selected><?php if(isset($data['category'])) echo $data['category'] ?></option>
                                     <option value="All">All</option>
                                     <option value="Game">Game</option>

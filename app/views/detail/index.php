@@ -1,28 +1,26 @@
 <div class="container" style="padding-top: 25px">
-  <h1 style="color: #C90000;"><strong>Tokyo 7th Sisters</strong><h1>
-  <p style="font-size:medium; color: #C90000;">November 8, 2016 12:45 PM</p>
   <div class="row">
-    <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>" draggable="false">
+    <img src="<?= 'data:image/jpg;base64,'.  $data['nid'][3] ?>" style="padding-bottom:8px; object-fit: cover; height: 500px; border-radius: 50px;" draggable="false">
   </div>
   <br>
 
-  <h1><strong><?= $data['nid'][1] ?></strong><h1>
-  <p style="font-size:21px"><?= $data['nid'][5] ?></p>
+  <h1 style="color: #C90000;"><strong><?= $data['nid'][1] ?></strong><h1>
+  <p style="font-size: 21px"><?= $data['nid'][5] ?></p>
   <br>
-  <p style="font-size:24px">
+  <p style="font-size:24px; text-align:justify;">
     <?= $data['nid'][6] ?>
   </p>
   <br>
-  <p style="font-size:18px">Penerbit: <?= $data['nid'][4] ?></p>
+  <p style="font-size:21px">Penulis: <?= $data['nid'][4] ?></p>
   <br>
 
-  <h3 style="padding-bottom:8px">Comment</h3>
+  <h3 style="padding-bottom:8px; color: #C90000;">Comment</h3>
   <?php 
     if (isset($_SESSION['loggedin'])) {
       ?>
       <div class="row">
         <div class="col col-md-1">
-          <img src="<?= 'data:image/jpg;base64,'.  $data['user'][7] ?>" class="col-md-12" style="border-radius: 50%" draggable="false">
+          <img src="<?= 'data:image/jpg;base64,'.  $data['user'][7] ?>" class="col-md-12" style="object-fit: cover; width: 100%; border-radius: 50%" draggable="false">
         </div>
         <div class="col col-md-11">
           <div class="row">
@@ -83,7 +81,7 @@
       ?>
       <div class="row">
       <div class="col col-md-1">
-        <img src="<?= 'data:image/jpg;base64,'.  $comment[3] ?>" class="col-md-12" style="border-radius: 50%" draggable="false">
+        <img src="<?= 'data:image/jpg;base64,'.  $comment[3] ?>" class="col-md-12" style="object-fit: cover; width: 100%; border-radius: 50%" draggable="false">
       </div>
       <div class="col col-md-11">
         <div class="row">

@@ -1,6 +1,9 @@
 
 <!-- Form -->
-<div class="container" style="padding-top: 9%; padding-bottom: 9%;">
+<div class="container" style="padding-top: 3%; padding-bottom: 9%;">
+    <div class="row text-center" style="margin-bottom: 28px;">
+        <h1>Login</h1>
+    </div>
     <div class="row justify-content-center">
         <form method="POST" action="<?= base_url ?>/dologin" class="col-md-6">
             <div class="form-group" style="padding-bottom:15px">
@@ -26,9 +29,9 @@
             }
             ?>
 
-            <button type="submit" class="btn btn-primary" style="margin-right:5px">Submit</button>
-            <a href="<?= base_url ?>" class="btn btn-secondary" role="button" style="margin-right:5px">Cancel</a>
-            <a href="<?= base_url ?>signup" class="btn btn-warning" role="button">Sign Up</a>
+            <button type="submit" class="btn btn-primary" style="margin-top: 21px; margin-right:5px">Submit</button>
+            <a href="<?= base_url ?>" class="btn btn-secondary" role="button" style="margin-top: 21px; margin-right:5px">Cancel</a>
+            <a href="<?= base_url ?>signup" class="btn btn-danger" role="button" style="margin-top: 21px;">Sign Up</a>
         </form>
     </div>
 </div>
