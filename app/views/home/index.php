@@ -12,7 +12,7 @@
             </a>
             <div class="row">
                 <div class="col">
-                    <a href="<?= base_url ?>detail<?= "?". $data['allnews'][0][0] ?>" style="text-transform: uppercase; color: #C90000; text-decoration: none;">
+                    <a href="<?= base_url ?>detail<?= "/". $data['allnews'][0][0] ?>" style="text-transform: uppercase; color: #C90000; text-decoration: none;">
                         <strong><p style="font-size: x-large; "><?= $data['allnews'][0][1] ?></p></strong>
                     </a>
                 </div>
