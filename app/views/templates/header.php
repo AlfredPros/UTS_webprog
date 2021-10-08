@@ -38,7 +38,7 @@
             background-position: top left, top middle;
             background-repeat: repeat-xy;
             background-size: 100%; 
-            background-attachment: fixed;  /* fixed, scroll */
+            background-attachment: fixed;  
         }
         footer {
                 position: relative;

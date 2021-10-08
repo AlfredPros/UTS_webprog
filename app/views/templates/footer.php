@@ -1,6 +1,6 @@
 
     <footer>
-        <p><b>"With the love of the Kawaii-desu group"<br>「カワイデスグループの愛を込めて」</b></p>
+        <p><b>"With the love of the Kawaii-desu group"<br>「カワイイですグループの愛を込めて」</b></p>
         <img src="<?= base_img ?>anime_news_logo_white.png" alt="" width="200">
     </footer>
     <script>
