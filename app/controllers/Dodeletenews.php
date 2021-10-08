@@ -14,6 +14,5 @@ class Dodeletenews extends Controller {
 
         header('Location: '.base_url);
         die();
-
     }
 }

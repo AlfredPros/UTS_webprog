@@ -23,8 +23,7 @@ class Doeditnews extends Controller {
             die();
         }
         else {
-            echo "Missing input";
-
+            
             if ($imageSize > maxFileSize) {
                 $_SESSION['alertnotif'] = "File Size Too Big!";
             } else {

@@ -6,7 +6,6 @@ class Dologout extends Controller {
         unset($_SESSION['admin']);
         unset($_SESSION['alertnotif']);
 
-        echo "Logged out.";
 
         header('Location: '.base_url);
         die();

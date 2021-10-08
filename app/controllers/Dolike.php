@@ -22,8 +22,6 @@ class Dolike extends Controller {
             die();
         }
         else {
-            echo "Hacker alert!";
-
             header('Location: '.base_url.'detail/'.$data['NID']);
             die();
         }

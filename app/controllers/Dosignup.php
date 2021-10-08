@@ -27,7 +27,6 @@ class Dosignup extends Controller {
             die();
         }
         else {
-            echo "Something wrong alert!";
             if ($imageSize > maxFileSize) {
                 $_SESSION['alertnotif'] = "File Size Too Big!";
             } else {

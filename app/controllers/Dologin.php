@@ -26,8 +26,7 @@ class Dologin extends Controller {
                     die();
                 }
                 else {
-                    echo "Wrong username/password!";
-    
+
                     $_SESSION['alertnotif'] = "Wrong username or password!";
         
                     header('Location: '.base_url.'login');
@@ -35,7 +34,6 @@ class Dologin extends Controller {
                 }
             }
             else {
-                echo "Robot alert!";
     
                 $_SESSION['alertnotif'] = "Recaptcha wrong!";
     
@@ -44,8 +42,7 @@ class Dologin extends Controller {
             }
         }
         else {
-            echo "Hacker alert!";
-
+           
             $_SESSION['alertnotif'] = "Missing input!";
 
             header('Location: '.base_url.'login');
