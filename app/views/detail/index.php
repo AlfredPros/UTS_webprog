@@ -53,7 +53,7 @@
         ?>
   <div class="row">
     <div class="col col-md-1">
-      <img src="<?= base_img ?>qnfa0iQK_400x400.jpg" class="col-md-12" style="border-radius: 50%" draggable="false">
+      <img src="<?= base_img ?>qnfa0iQK_400x400.jpg" class="col-md-12" style="object-fit: cover; width: 100%; border-radius: 50%" draggable="false">
     </div>
     <div class="col col-md-11">
       <div class="row">
