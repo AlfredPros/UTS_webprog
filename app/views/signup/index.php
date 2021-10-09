@@ -5,7 +5,7 @@
         <h1 style="color:#c90000">Sign Up</h1>
     </div>
     <div class="row justify-content-center">
-        <form method="POST" action="<?= base_url ?>/dosignup" class="col-md-6" enctype="multipart/form-data">
+        <form method="POST" action="<?= base_url ?>dosignup" class="col-md-6" enctype="multipart/form-data">
             <div class="form-group" style="padding-bottom:15px">
                 <label for="firstname">First Name</label>
                 <input type="text" class="form-control" id="firstname" name="firstname" placeholder="John" value="" required>

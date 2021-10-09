@@ -5,7 +5,7 @@
   </div>
   <br>
 
-  <h1 style="color: #C90000;"><strong><?= $data['nid'][1] ?></strong><h1>
+  <h1 style="color: #C90000;"><strong><?= $data['nid'][1] ?></strong></h1>
   <p style="font-size: 21px"><?= $data['nid'][5] ?></p>
   <br>
   <p style="font-size:24px; text-align:justify;">
@@ -53,7 +53,7 @@
         ?>
   <div class="row">
     <div class="col col-md-1">
-      <img src="<?= base_img ?>qnfa0iQK_400x400.jpg" class="col-md-12" style="object-fit: cover; width: 100%; border-radius: 50%" draggable="false">
+      <img src="https://i.ibb.co/n6XFFZS/qnfa0i-QK-400x400.jpg" class="col-md-12" style="object-fit: cover; width: 100%; border-radius: 50%" draggable="false">
     </div>
     <div class="col col-md-11">
       <div class="row">
@@ -86,7 +86,7 @@
       </div>
       <div class="col col-md-11">
         <div class="row">
-          <p style="font-weight: bold; font-size:21px; margin-bottom:4px;"><?= $comment[2] .' ' . $comment[4]?></p>
+          <p style="font-weight: bold; font-size:21px; margin-bottom:4px;"><?= $comment[2] .' &nbsp;' . $comment[4]?></p>
           
         </div>
         <div class="row">
