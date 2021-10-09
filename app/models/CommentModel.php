@@ -4,8 +4,8 @@ class CommentModel extends Database
 {
     public function getAllComments($NID)
     {
-      $queryNews = $this->db->prepare("SELECT UID, commentContent, (SELECT username FROM allUser WHERE allUser.UID=comment.UID) AS username, 
-      (SELECT profilePhoto FROM allUser WHERE allUser.UID=comment.UID) AS profilePhoto, DATE_FORMAT(commentDate, '%M %D,  %Y %l:%i %p') commentDate,
+      $queryNews = $this->db->prepare("SELECT UID, commentContent, (SELECT username FROM alluser WHERE alluser.UID=comment.UID) AS username, 
+      (SELECT profilePhoto FROM alluser WHERE alluser.UID=comment.UID) AS profilePhoto, DATE_FORMAT(commentDate, '%M %D,  %Y %l:%i %p (GMT+7)') commentDate,
        CID, totalLikes
        from comment 
        WHERE NID=:NID
@@ -28,7 +28,7 @@ class CommentModel extends Database
 
     public function hasNotLiked($UID, $CID)
     {
-        $query = $this->db->prepare("SELECT * FROM likedBy WHERE UID=:UID AND CID=:CID");
+        $query = $this->db->prepare("SELECT * FROM likedby WHERE UID=:UID AND CID=:CID");
         $query->bindParam(":UID", $UID);
         $query->bindParam(":CID", $CID);
         $query->execute();
@@ -43,7 +43,7 @@ class CommentModel extends Database
     public function activateLikeButton($data)
     {
         if ($this->hasNotLiked($data['UID'], $data['CID'])) {
-            $query = $this->db->prepare("INSERT INTO likedBy(CID, UID) VALUES (:CID , :UID)");
+            $query = $this->db->prepare("INSERT INTO likedby(CID, UID) VALUES (:CID , :UID)");
             $query->bindParam(":CID", $data['CID']);
             $query->bindParam(":UID", $data['UID']);
             $query->execute();
@@ -56,7 +56,7 @@ class CommentModel extends Database
             $queryUpdate->execute();
             return $queryUpdate->rowCount();
         } else{
-            $query = $this->db->prepare("DELETE FROM likedBy WHERE UID=:UID AND CID=:CID");
+            $query = $this->db->prepare("DELETE FROM likedby WHERE UID=:UID AND CID=:CID");
             $query->bindParam(":CID", $data['CID']);
             $query->bindParam(":UID", $data['UID']);
             $query->execute();

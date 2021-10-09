@@ -4,7 +4,7 @@ class NewsModel extends Database
 {
   public function getNews($NID){
     $queryNews = $this->db->prepare("SELECT NID, newsTitle, newsCategory, newsThumbnail,
-                                   newsWriter, DATE_FORMAT(newsPublicationDate, '%M %D, %Y %l:%i %p'), newsContent FROM news WHERE NID=:NID");
+                                   newsWriter, DATE_FORMAT(newsPublicationDate, '%M %D, %Y %l:%i %p (GMT+7)'), newsContent FROM news WHERE NID=:NID");
     $queryNews->bindParam(":NID", $NID);
     $queryNews->execute();
     return $queryNews->fetch();
