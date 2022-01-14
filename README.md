@@ -36,10 +36,9 @@ Stucture Resources:
 		
 Pambagian tugas:
 
-	- Loysing: Database & Bootstrap (CSS) & Web design
+	- Loysing: Database & Web design
 	- Alfred: Struktur web
-	- Adhitya: Design setiap web & AJAX?
-	- Juan: Content?
+	- Adhitya: Design setiap web 
 
 References:
 
